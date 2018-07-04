@@ -2,6 +2,7 @@ package com.jade.bean;
 
 public class JadeVO {
 
+    private Long id;
     private String name;
     private String createTime;
     private String updateTime;
@@ -25,6 +26,14 @@ public class JadeVO {
         this.inch = inch;
         this.value = value;
         this.material = material;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
