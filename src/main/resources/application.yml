@@ -3,7 +3,26 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/pagoda_test
+    url: jdbc:mysql://140.143.159.112:3306/jade?characterEncoding=utf-8&characterSetResults=utf-8&useUnicode=false
     username: root
     password: 123456
-
+  freemarker:
+    suffix: .html
+    content-type: text/html
+    charset: utf-8
+    check-template-location: true
+    allow-request-override: false
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+    cache: true
+  resources:
+    static-locations: /META-INF/resources/, classpath:/static/, classpath:/templates/, classpath:/public/
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+mybatis:
+  type-aliases-package: com.jade.bean
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+  config-location: classpath:/mybatis/mybatis-config.xml
