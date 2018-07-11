@@ -21,7 +21,7 @@
 
         <!--数据库链接URL，用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/pagoda_test" userId="root" password="123456">
+                        connectionURL="jdbc:mysql://140.143.159.112:3306/jade" userId="root" password="123456">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
@@ -41,7 +41,7 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
-        <table tableName="jade" domainObjectName="Jade" enableCountByExample="true" enableUpdateByExample="true"
+        <table tableName="user" domainObjectName="User" enableCountByExample="true" enableUpdateByExample="true"
                enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"></table>
     </context>
 </generatorConfiguration>

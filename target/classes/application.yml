@@ -7,6 +7,7 @@ spring:
     username: root
     password: 123456
     max-wait: 3000
+    type: com.alibaba.druid.pool.DruidDataSource
   freemarker:
     suffix: .html
     content-type: text/html
@@ -29,7 +30,7 @@ mybatis:
 fdfs:
   so-timeout: 15000
   connect-timeout: 3000
-  resHost: 14.143.159.112
+  resHost: 140.143.159.112
   pool:
     jmx-enabled: false
   tracker-list: 140.143.159.112:22122
