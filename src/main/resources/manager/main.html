@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理页面</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+        table {
+            text-align: center;
+            border: solid;
+            border-width: 1px;
+            padding: 0px;
+            border-collapse: collapse;
+        }
+        table tr {
+            text-align: center;
+            border: solid;
+            border-width: 1px;
+            padding: 0px;
+            border-collapse: collapse;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+<div id="main" name="main">
+
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">菜鸟教程</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">新增商品</a></li>
+                    <li><a href="#">商品列表</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Java <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">jmeter</a></li>
+                            <li><a href="#">EJB</a></li>
+                            <li><a href="#">Jasper Report</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">分离的链接</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">另一个分离的链接</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="pull-right">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/login.html">登录</a></li>
+                    <li><a href="/manager/register.html">注册</a></li>
+                    <!--<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Java <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">jmeter</a></li>
+                            <li><a href="#">EJB</a></li>
+                            <li><a href="#">Jasper Report</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">分离的链接</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">另一个分离的链接</a></li>
+                        </ul>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   <div class="container">
+       <form id="addInfo" action="#" method="post" enctype="multipart/form-data">
+           <table border="solid">
+               <thead>
+               <td>名称</td>
+               <td>输入</td>
+               </thead>
+               <tr>
+                   <td>
+                       <button class="button success" name="名称"></button>
+                   </td>
+                   <td>
+                       <input name="name" type="text" placeholder="请输入名字"/>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       <button class="button success" name="来源"></button>
+                   </td>
+                   <td>
+                       <input name="source" type="text" placeholder="请输入来源"/>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       <button class="button success" name="年代"></button>
+                   </td>
+                   <td>
+                       <input name="born" type="text" placeholder="请输入年代"/>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       <button class="button success" name="尺寸"></button>
+                   </td>
+                   <td>
+                       <input name="inch" type="text" placeholder="请输入尺寸格式（5 * 10）"/>
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       <button class="button success" name="图片"></button>
+                   </td>
+                   <td>
+                       <input type="file" name="file" placeholder="请选择文件"/>
+                   </td>
+               </tr>
+
+               <tr>
+                   <td>
+                       <button class="button success" name="价值"></button>
+                   </td>
+                   <td>
+                       <input name="value" type="text" placeholder="请输入价值"/>
+                   </td>
+               </tr>
+
+               <tr>
+                   <td>
+                       <button class="button success" name="材质"></button>
+                   </td>
+                   <td>
+                       <input name="material" type="text" placeholder="请输入材质"/>
+                   </td>
+               </tr>
+               <tr>
+                   <td style="column-span: all">
+                       <button class="button success" name="提交" id="submit"></button>
+                   </td>
+
+               </tr>
+           </table>
+       </form>
+   </div>
+</div>
+
+
+<script type="text/javascript" src="/templates/default/js/jquery-1.8.0.min.js"/>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>
