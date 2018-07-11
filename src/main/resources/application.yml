@@ -2,10 +2,13 @@ server:
   port: 8179
 spring:
   datasource:
+
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://140.143.159.112:3306/jade?characterEncoding=utf-8&characterSetResults=utf-8&useUnicode=false
     username: root
     password: 123456
+    max-wait: 3000
+    type: com.alibaba.druid.pool.DruidDataSource
   freemarker:
     suffix: .html
     content-type: text/html
@@ -25,4 +28,10 @@ spring:
 mybatis:
   type-aliases-package: com.jade.bean
   mapper-locations: classpath:/mybatis/mapper/*.xml
-  config-location: classpath:/mybatis/mybatis-config.xml
+fdfs:
+  so-timeout: 15000
+  connect-timeout: 3000
+  resHost: 14.143.159.112
+  pool:
+    jmx-enabled: false
+  tracker-list: 140.143.159.112:22122

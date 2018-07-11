@@ -1,6 +1,10 @@
 package com.pagoda.goods;
 
 
+import com.alibaba.fastjson.JSONArray;
+import com.jade.fdfs.FastDFSClient;
+import com.jade.fdfs.FastDSFile;
+import org.csource.fastdfs.*;
 import org.junit.Test;
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
@@ -8,8 +12,12 @@ import org.mybatis.generator.config.xml.ConfigurationParser;
 import org.mybatis.generator.exception.InvalidConfigurationException;
 import org.mybatis.generator.exception.XMLParserException;
 import org.mybatis.generator.internal.DefaultShellCallback;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -81,5 +89,51 @@ public class TestEShop {
         }
     }
 
+
+    @Test
+    public void test() {
+
+        try {
+            Resource resource = new ClassPathResource("fdfs_client.conf");
+            File file = resource.getFile();
+            String absolutePath = file.getAbsolutePath();
+            ClientGlobal.init(absolutePath);
+            TrackerClient trackerClient = new TrackerClient(ClientGlobal.g_tracker_group);
+
+            TrackerServer trackerServer = trackerClient.getConnection();
+            StorageServer storageServer = trackerClient.getStoreStorage(trackerServer);
+            StorageClient1 storageClient = new StorageClient1(trackerServer, storageServer);
+            System.out.println("client init success ... ... ");
+
+            FileInputStream fis = new FileInputStream(new File("C:\\Users\\wangwanjun\\Desktop\\logo1.png"));
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+
+            byte[] cache = new byte[4096];
+            while (fis.read(cache) != -1) {
+                bos.write(cache);
+            }
+            fis.close();
+            FastDSFile fastDSFile = new FastDSFile();
+            fastDSFile.setContent(bos.toByteArray());
+            fastDSFile.setExt("jpg");
+
+            String[] filePath = null;
+            JSONArray uploadResult = null;
+            if (fastDSFile != null) {
+                filePath = storageClient.upload_file(fastDSFile.getContent(), fastDSFile.getExt(), null);
+            }
+            if (filePath != null) {
+                uploadResult = (JSONArray) JSONArray.toJSON(filePath);
+            }
+            String url = "140.143.159.112:8888/" + uploadResult.get(0) +  "/" + uploadResult.get(1);
+            System.out.println(url);
+
+            System.out.println(uploadResult);
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("client init failed ... ... ");
+        }
+
+    }
 
 }

@@ -6,6 +6,7 @@ spring:
     url: jdbc:mysql://140.143.159.112:3306/jade?characterEncoding=utf-8&characterSetResults=utf-8&useUnicode=false
     username: root
     password: 123456
+    max-wait: 3000
   freemarker:
     suffix: .html
     content-type: text/html
@@ -18,5 +19,17 @@ spring:
     cache: true
   resources:
     static-locations: /META-INF/resources/, classpath:/static/, classpath:/templates/, classpath:/public/
-
-
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+mybatis:
+  type-aliases-package: com.jade.bean
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+fdfs:
+  so-timeout: 15000
+  connect-timeout: 3000
+  resHost: 14.143.159.112
+  pool:
+    jmx-enabled: false
+  tracker-list: 140.143.159.112:22122
