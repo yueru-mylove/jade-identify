@@ -1,6 +1,5 @@
 package com.jade.service;
 
-
 import com.jade.bean.User;
 import com.jade.bean.UserExample;
 import com.jade.dao.UserMapper;

@@ -1,7 +1,6 @@
 package com.jade.controller;
 
 
-/*import com.jade.bean.User;*/
 import com.jade.bean.User;
 import com.jade.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +31,6 @@ public class AdministorController {
         System.out.println("test");
         return "login";
     }
-
 
 
     @PostMapping("/manager/login")

@@ -5,7 +5,6 @@ import com.jade.bean.User;
 
 public interface UserService {
 
-
     User addUser(User user);
 
 

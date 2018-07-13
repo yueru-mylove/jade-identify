@@ -774,6 +774,76 @@ public class JadeExample {
             addCriterion("MATERIAL not between", value1, value2, "material");
             return (Criteria) this;
         }
+
+        public Criteria andNumberIsNull() {
+            addCriterion("NUMBER is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberIsNotNull() {
+            addCriterion("NUMBER is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberEqualTo(String value) {
+            addCriterion("NUMBER =", value, "number");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberNotEqualTo(String value) {
+            addCriterion("NUMBER <>", value, "number");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberGreaterThan(String value) {
+            addCriterion("NUMBER >", value, "number");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberGreaterThanOrEqualTo(String value) {
+            addCriterion("NUMBER >=", value, "number");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberLessThan(String value) {
+            addCriterion("NUMBER <", value, "number");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberLessThanOrEqualTo(String value) {
+            addCriterion("NUMBER <=", value, "number");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberLike(String value) {
+            addCriterion("NUMBER like", value, "number");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberNotLike(String value) {
+            addCriterion("NUMBER not like", value, "number");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberIn(List<String> values) {
+            addCriterion("NUMBER in", values, "number");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberNotIn(List<String> values) {
+            addCriterion("NUMBER not in", values, "number");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberBetween(String value1, String value2) {
+            addCriterion("NUMBER between", value1, value2, "number");
+            return (Criteria) this;
+        }
+
+        public Criteria andNumberNotBetween(String value1, String value2) {
+            addCriterion("NUMBER not between", value1, value2, "number");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

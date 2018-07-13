@@ -34,7 +34,7 @@ public class DemoSpringbootFastdfsApplicationTests {
             fastDSFile.setExt("jpg");
 
             // -------上传----
-            JSONArray rs = FastDFSClient.upload(fastDSFile);
+            String[] rs = FastDFSClient.upload(fastDSFile);
             System.out.println("上传结束:" + rs);
 
             // -------下载----

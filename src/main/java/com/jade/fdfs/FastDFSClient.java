@@ -2,6 +2,7 @@ package com.jade.fdfs;
 
 import com.alibaba.fastjson.JSONArray;
 import org.csource.common.MyException;
+import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -40,16 +41,14 @@ public class FastDFSClient {
     }
 
 
-    public static JSONArray upload(FastDSFile fastDSFile) throws IOException, MyException {
+    public static String[] upload(FastDSFile fastDSFile) throws IOException, MyException {
+
         String[] filePath = null;
-        JSONArray uploadResult = null;
         if (fastDSFile != null) {
             filePath = storageClient.upload_file(fastDSFile.getContent(), fastDSFile.getExt(), null);
         }
-        if (filePath != null) {
-            uploadResult = (JSONArray) JSONArray.toJSON(filePath);
-        }
-        return uploadResult;
+
+        return filePath;
     }
 
 

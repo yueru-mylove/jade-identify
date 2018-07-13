@@ -3,13 +3,8 @@ package com.jade.dao;
 import com.jade.bean.Jade;
 import com.jade.bean.JadeExample;
 import java.util.List;
-
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
 
-@Component
-@Mapper
 public interface JadeMapper {
     long countByExample(JadeExample example);
 
@@ -32,4 +27,6 @@ public interface JadeMapper {
     int updateByPrimaryKeySelective(Jade record);
 
     int updateByPrimaryKey(Jade record);
+
+    int insertJadeInfo(Jade jade);
 }

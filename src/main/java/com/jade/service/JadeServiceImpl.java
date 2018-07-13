@@ -2,14 +2,21 @@ package com.jade.service;
 
 import com.jade.bean.Jade;
 import com.jade.bean.JadeExample;
+import com.jade.controller.JadeController;
 import com.jade.dao.JadeMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
 public class JadeServiceImpl implements JadeService {
+
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(JadeController.class);
 
     @Autowired
     private JadeMapper jadeMapper;
@@ -36,8 +43,11 @@ public class JadeServiceImpl implements JadeService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public boolean addJade(Jade jade) {
-        int insert = jadeMapper.insert(jade);
+        Integer clickcount = (int)(100 * Math.random()) + 1;
+        jade.setClickcount(clickcount.toString());
+        int insert = jadeMapper.insertJadeInfo(jade);
         if (insert == 1) {
             return true;
         }
@@ -50,6 +60,7 @@ public class JadeServiceImpl implements JadeService {
      * @return
      */
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public boolean updateJade(Jade jade) {
 
         int result = jadeMapper.updateByPrimaryKey(jade);

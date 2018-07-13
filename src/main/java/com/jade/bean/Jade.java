@@ -23,13 +23,8 @@ public class Jade {
 
     private String material;
 
-    public Integer getId() {
-        return id;
-    }
+    private String number;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -101,5 +96,13 @@ public class Jade {
 
     public void setMaterial(String material) {
         this.material = material == null ? null : material.trim();
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number == null ? null : number.trim();
     }
 }

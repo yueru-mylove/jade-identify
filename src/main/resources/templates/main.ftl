@@ -87,7 +87,7 @@
                 <div class="form-group">
                     <label for="name" class="col-sm-2 control-label">编号</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="请输入编号">
+                        <input type="text" class="form-control" id="number" name="number" placeholder="请输入编号">
                     </div>
                 </div>
                 <div class="form-group">
@@ -115,11 +115,19 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="source" class="col-sm-2 control-label">图片</label>
+                    <label for="value" class="col-sm-2 control-label">材质</label>
                     <div class="col-sm-10">
-                        <input type="file" class="form-control" id="source" name="source" placeholder="请选择图片">
+                        <input type="text" class="form-control" id="material" name="material" placeholder="请输入材质">
                     </div>
                 </div>
+                <form id="uploadForm" class="form-control" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="source" class="col-sm-2 control-label">图片</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control" id="source" name="source" placeholder="请选择图片">
+                        </div>
+                    </div>
+                </form>
                 <!--<div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <div class="checkbox">
@@ -131,7 +139,7 @@
                 </div>-->
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" id="submit" class="btn btn-success">添加</button>
+                        <button type="button" id="submit" class="btn btn-success">添加</button>
                     </div>
                 </div>
             </form>
@@ -145,37 +153,79 @@
 <script>
     $(function () {
 
-        var filePath = {};
-        var fileName = {};
-
-
+        var filePath = "";
         $("#source").change(function () {
-            var file = this.files[0];
-            if (window.FileReader) {
-                var reader = new FileReader();
-                reader.readAsDataURL(file);
-                //监听文件读取结束后事件
-                reader.onloadend = function (e) {
-                    alert(e.target.result);
-                }
+            var file = document.getElementById("source").files[0];
+            if (!file) {
+                alert("请选择图片！")
+                return;
             }
             var checkResult = verificationPicFile(file);
-            if (checkResult) {
-                alert(checkResult);
+            var formData = new FormData();
+            formData.append("file", file);
+            if (checkResult == true) {
+                $.ajax({
+                    url: "/jade/file/upload",
+                    type: "Post",
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    data: formData,
+                    dataType: "JSON",
+                    success: function (result) {
+                        filePath = result.data;
+                    },
+                    error: function (result) {
+                        alert("上传失败，请重新上传！");
+                    }
+                });
             }
+        });
 
 
-        })
+        $("#submit").click(function () {
 
-        $("#submit").click(function() {
+            var infoForm = new FormData();
+            var name = $("#name").val();
+            var number = $("#number").val();
+            var material = $("#material").val();
+            var born = $("#born").val();
+            var inch = $("#inch").val();
+            var value = $("#value").val();
+            $.ajax({
+                url: "/jade/info/add",
+                type: "post",
+                cache: "false",
+                data: {
+                    "id" : number,
+                    "name" : name,
+                    "material" : material,
+                    "born" : born,
+                    "inch" : inch,
+                    "value" : value,
+                    "source" : filePath,
+                    "number" : number
+                },
+                dataType : "json",
+                success: function (result) {
+                    if (result.code == 0) {
+                        alert("上传成功！")
+                    } else {
+                        alert("上传失败！")
+                    }
+                },
+                error: function (result) {
+                    alert("上传失败！")
+                }
+            })
+        });
 
-        })
 
         function verificationPicFile(file) {
-            var fileTypes = [".jpg", ".png"];
-            var filePath = file.value;
+            var fileTypes = [".jpg", ".png", ".jpeg", ".gif"];
+            var filePath = file.name;
             //当括号里面的值为0、空字符、false 、null 、undefined的时候就相当于false
-            if(filePath){
+            if (filePath) {
                 var isNext = false;
                 var fileEnd = filePath.substring(filePath.indexOf("."));
                 for (var i = 0; i < fileTypes.length; i++) {
@@ -184,12 +234,13 @@
                         break;
                     }
                 }
-                if (!isNext){
+                if (!isNext) {
                     alert('不接受此文件类型');
                     file.value = "";
                     return false;
                 }
-            }else {
+                return true;
+            } else {
                 return false;
             }
         }

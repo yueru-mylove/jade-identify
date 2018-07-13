@@ -12,6 +12,7 @@
     <result column="INCH" jdbcType="VARCHAR" property="inch" />
     <result column="VALUE" jdbcType="VARCHAR" property="value" />
     <result column="MATERIAL" jdbcType="VARCHAR" property="material" />
+    <result column="NUMBER" jdbcType="VARCHAR" property="number" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -72,7 +73,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    ID, NAME, CREATETIME, UPDATETIME, SOURCE, CLICKCOUNT, BORN, INCH, VALUE, MATERIAL
+    ID, NAME, CREATETIME, UPDATETIME, SOURCE, CLICKCOUNT, BORN, INCH, VALUE, MATERIAL, 
+    NUMBER
   </sql>
   <select id="selectByExample" parameterType="com.jade.bean.JadeExample" resultMap="BaseResultMap">
     select
@@ -109,11 +111,11 @@
     insert into jade (ID, NAME, CREATETIME, 
       UPDATETIME, SOURCE, CLICKCOUNT, 
       BORN, INCH, VALUE, 
-      MATERIAL)
+      MATERIAL, NUMBER)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, 
       #{updatetime,jdbcType=TIMESTAMP}, #{source,jdbcType=VARCHAR}, #{clickcount,jdbcType=VARCHAR}, 
       #{born,jdbcType=VARCHAR}, #{inch,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR}, 
-      #{material,jdbcType=VARCHAR})
+      #{material,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.jade.bean.Jade">
     insert into jade
@@ -148,6 +150,9 @@
       <if test="material != null">
         MATERIAL,
       </if>
+      <if test="number != null">
+        NUMBER,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -179,6 +184,9 @@
       </if>
       <if test="material != null">
         #{material,jdbcType=VARCHAR},
+      </if>
+      <if test="number != null">
+        #{number,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -221,6 +229,9 @@
       <if test="record.material != null">
         MATERIAL = #{record.material,jdbcType=VARCHAR},
       </if>
+      <if test="record.number != null">
+        NUMBER = #{record.number,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -237,7 +248,8 @@
       BORN = #{record.born,jdbcType=VARCHAR},
       INCH = #{record.inch,jdbcType=VARCHAR},
       VALUE = #{record.value,jdbcType=VARCHAR},
-      MATERIAL = #{record.material,jdbcType=VARCHAR}
+      MATERIAL = #{record.material,jdbcType=VARCHAR},
+      NUMBER = #{record.number,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -272,6 +284,9 @@
       <if test="material != null">
         MATERIAL = #{material,jdbcType=VARCHAR},
       </if>
+      <if test="number != null">
+        NUMBER = #{number,jdbcType=VARCHAR},
+      </if>
     </set>
     where ID = #{id,jdbcType=INTEGER}
   </update>
@@ -285,7 +300,13 @@
       BORN = #{born,jdbcType=VARCHAR},
       INCH = #{inch,jdbcType=VARCHAR},
       VALUE = #{value,jdbcType=VARCHAR},
-      MATERIAL = #{material,jdbcType=VARCHAR}
+      MATERIAL = #{material,jdbcType=VARCHAR},
+      NUMBER = #{number,jdbcType=VARCHAR}
     where ID = #{id,jdbcType=INTEGER}
   </update>
+
+  <insert id="insertJadeInfo" parameterType="com.jade.bean.Jade">
+    insert into jade (`name`, source, born, `value`, material, number, inch, clickcount, createTime, updateTime)
+    values (#{name}, #{source}, #{born}, #{value}, #{material}, #{number}, #{inch}, #{clickcount}, now(), now())
+  </insert>
 </mapper>
