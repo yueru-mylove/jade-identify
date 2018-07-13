@@ -232,7 +232,7 @@ line-height: 40px;color:#ce0000;margin: 50px auto 80px;-webkit-transition: .5s;-
 
 
 
-.about_banner{ height:500px; background:url(../images/about_banner.jpg) center top no-repeat;}
+.about_banner{ height:500px; background:url(../images/middle_banner.jpg) center top no-repeat;}
 .about_banCen{width:974px; margin:0 auto; padding-top:110px;}
 .about_banTitle{ line-height:100%; color:#FFF; font-size:55px; font-weight:bold; text-align:center;}
 .about_banCon{ color:#fff; font-size:14px; line-height:26px; height:312px; overflow:hidden; padding-top:40px;}

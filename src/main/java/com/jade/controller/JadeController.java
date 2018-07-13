@@ -90,6 +90,12 @@ public class JadeController {
     }
 
 
+    @RequestMapping(value = "/search")
+    public String toSearch() {
+        return "identify";
+    }
+
+
     @ResponseBody
     @RequestMapping(value = "/file/upload", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Result fileUpload(@RequestParam("file") MultipartFile file, HttpServletRequest request) {
