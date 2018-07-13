@@ -3,20 +3,26 @@ package com.jade.config;
 import com.alibaba.druid.pool.DruidDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import javax.sql.DataSource;
 
 @Configuration
+@MapperScan("com.jade.dao")
 public class DataSourceConfig {
 
 
     @Value("${spring.datasource.driver-class-name}")
     private String driver;
-    @Value("${spring.datasource.url")
+    @Value("${spring.datasource.url}")
     private String url;
     @Value("${spring.datasource.username}")
     private String username;
@@ -39,6 +45,8 @@ public class DataSourceConfig {
     public SqlSessionFactory sqlSessionFactory(@Autowired DataSource dataSource) throws Exception {
         SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
         sqlSessionFactory.setDataSource(dataSource);
+        PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+        sqlSessionFactory.setMapperLocations(new Resource[]{resolver.getResource("classpath:mybatis/mapper/UserMapper.xml"), resolver.getResource("classpath:mybatis/mapper/JadeMapper.xml")});
         return sqlSessionFactory.getObject();
     }
 

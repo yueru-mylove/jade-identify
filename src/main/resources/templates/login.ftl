@@ -1,10 +1,9 @@
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
-    <title>jQuery/CSS3分步骤注册表单切换动画在线演示</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>jQuery/CSS3鍒嗘楠ゆ敞鍐岃〃鍗曞垏鎹㈠姩鐢诲湪绾挎紨绀�</title>
     <link rel="stylesheet" media="screen" href="/templates/default/style/login.css"/>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -14,12 +13,12 @@
 <nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">保利玉品</a>
+            <a class="navbar-brand" href="#">淇濆埄鐜夊搧</a>
         </div>
         <div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">新增商品</a></li>
-                <li><a href="#">商品列表</a></li>
+                <li><a href="#">鏂板鍟嗗搧</a></li>
+                <li><a href="#">鍟嗗搧鍒楄〃</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         Java <b class="caret"></b>
@@ -29,17 +28,17 @@
                         <li><a href="#">EJB</a></li>
                         <li><a href="#">Jasper Report</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">分离的链接</a></li>
+                        <li><a href="#">鍒嗙鐨勯摼鎺�</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">另一个分离的链接</a></li>
+                        <li><a href="#">鍙︿竴涓垎绂荤殑閾炬帴</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
         <div class="nav navbar-nav pull-right">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/login.html">登录</a></li>
-                <li><a href="/manager/register.html">注册</a></li>
+                <li class="active"><a href="/login.html">鐧诲綍</a></li>
+                <li><a href="/static/manager/register.html">娉ㄥ唽</a></li>
                 <!--<li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         Java <b class="caret"></b>
@@ -49,9 +48,9 @@
                         <li><a href="#">EJB</a></li>
                         <li><a href="#">Jasper Report</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">分离的链接</a></li>
+                        <li><a href="#">鍒嗙鐨勯摼鎺�</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">另一个分离的链接</a></li>
+                        <li><a href="#">鍙︿竴涓垎绂荤殑閾炬帴</a></li>
                     </ul>
                 </li>-->
             </ul>
@@ -60,40 +59,19 @@
 </nav>
 
 <div class="container-fluid">
-    <form id="msform">
-        <!-- progressbar -->
+    <form id="msform" action="/manager/login" method="post">
+<!--        &lt;!&ndash; progressbar &ndash;&gt;
         <ul id="progressbar">
             <li class="active">Account Setup</li>
             <li>Social Profiles</li>
             <li>Personal Details</li>
-        </ul>
+        </ul>-->
         <!-- fieldsets -->
         <fieldset>
-            <h2 class="fs-title">Create your account</h2>
-            <h3 class="fs-subtitle">This is step 1</h3>
-            <input type="text" name="email" placeholder="Email"/>
-            <input type="password" name="pass" placeholder="Password"/>
-            <input type="password" name="cpass" placeholder="Confirm Password"/>
-            <input type="button" name="next" class="next action-button" value="Next"/>
-        </fieldset>
-        <fieldset>
-            <h2 class="fs-title">Social Profiles</h2>
-            <h3 class="fs-subtitle">Your presence on the social network</h3>
-            <input type="text" name="twitter" placeholder="Twitter"/>
-            <input type="text" name="facebook" placeholder="Facebook"/>
-            <input type="text" name="gplus" placeholder="Google Plus"/>
-            <input type="button" name="previous" class="previous action-button" value="Previous"/>
-            <input type="button" name="next" class="next action-button" value="Next"/>
-        </fieldset>
-        <fieldset>
-            <h2 class="fs-title">Personal Details</h2>
-            <h3 class="fs-subtitle">We will never sell it</h3>
-            <input type="text" name="fname" placeholder="First Name"/>
-            <input type="text" name="lname" placeholder="Last Name"/>
-            <input type="text" name="phone" placeholder="Phone"/>
-            <textarea name="address" placeholder="Address"></textarea>
-            <input type="button" name="previous" class="previous action-button" value="Previous"/>
-            <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+            <h2 class="fs-title">Sign In your account</h2>
+            <input type="text" name="username" placeholder="username"/>
+            <input type="password" name="password" placeholder="Password"/>
+            <input type="submit" name="submit" class="next action-button" value="Sign In"/>
         </fieldset>
     </form>
     <script src="/templates/default/js/jquery-1.9.1.min.js" type="text/javascript"></script>
@@ -102,6 +80,17 @@
     <br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br>
 </div>
+
+    <script>
+        $(function () {
+
+            $("button").click(function () {
+                var result = $("#msform").submit;
+                alert(result);
+            })
+
+        })
+    </script>
 
 
 </body>

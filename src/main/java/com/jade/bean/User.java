@@ -13,6 +13,8 @@ public class User {
 
     private Integer retryTimes;
 
+    private String token;
+
     public Integer getId() {
         return id;
     }
@@ -59,5 +61,13 @@ public class User {
 
     public void setRetryTimes(Integer retryTimes) {
         this.retryTimes = retryTimes;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token == null ? null : token.trim();
     }
 }

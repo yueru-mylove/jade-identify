@@ -8,6 +8,7 @@
     <result column="EMAIL" jdbcType="VARCHAR" property="email" />
     <result column="PHONE" jdbcType="VARCHAR" property="phone" />
     <result column="RETRY_TIMES" jdbcType="INTEGER" property="retryTimes" />
+    <result column="TOKEN" jdbcType="VARCHAR" property="token" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -68,7 +69,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    ID, USERNAME, PASSWORD, EMAIL, PHONE, RETRY_TIMES
+    ID, USERNAME, PASSWORD, EMAIL, PHONE, RETRY_TIMES, TOKEN
   </sql>
   <select id="selectByExample" parameterType="com.jade.bean.UserExample" resultMap="BaseResultMap">
     select
@@ -103,11 +104,11 @@
   </delete>
   <insert id="insert" parameterType="com.jade.bean.User">
     insert into user (ID, USERNAME, PASSWORD, 
-      EMAIL, PHONE, RETRY_TIMES
-      )
+      EMAIL, PHONE, RETRY_TIMES, 
+      TOKEN)
     values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
-      #{email,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{retryTimes,jdbcType=INTEGER}
-      )
+      #{email,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, #{retryTimes,jdbcType=INTEGER}, 
+      #{token,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.jade.bean.User">
     insert into user
@@ -130,6 +131,9 @@
       <if test="retryTimes != null">
         RETRY_TIMES,
       </if>
+      <if test="token != null">
+        TOKEN,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -149,6 +153,9 @@
       </if>
       <if test="retryTimes != null">
         #{retryTimes,jdbcType=INTEGER},
+      </if>
+      <if test="token != null">
+        #{token,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -179,6 +186,9 @@
       <if test="record.retryTimes != null">
         RETRY_TIMES = #{record.retryTimes,jdbcType=INTEGER},
       </if>
+      <if test="record.token != null">
+        TOKEN = #{record.token,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -191,7 +201,8 @@
       PASSWORD = #{record.password,jdbcType=VARCHAR},
       EMAIL = #{record.email,jdbcType=VARCHAR},
       PHONE = #{record.phone,jdbcType=VARCHAR},
-      RETRY_TIMES = #{record.retryTimes,jdbcType=INTEGER}
+      RETRY_TIMES = #{record.retryTimes,jdbcType=INTEGER},
+      TOKEN = #{record.token,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -214,6 +225,9 @@
       <if test="retryTimes != null">
         RETRY_TIMES = #{retryTimes,jdbcType=INTEGER},
       </if>
+      <if test="token != null">
+        TOKEN = #{token,jdbcType=VARCHAR},
+      </if>
     </set>
     where ID = #{id,jdbcType=INTEGER}
   </update>
@@ -223,7 +237,8 @@
       PASSWORD = #{password,jdbcType=VARCHAR},
       EMAIL = #{email,jdbcType=VARCHAR},
       PHONE = #{phone,jdbcType=VARCHAR},
-      RETRY_TIMES = #{retryTimes,jdbcType=INTEGER}
+      RETRY_TIMES = #{retryTimes,jdbcType=INTEGER},
+      TOKEN = #{token,jdbcType=VARCHAR}
     where ID = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

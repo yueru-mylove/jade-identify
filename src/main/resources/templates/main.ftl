@@ -6,25 +6,7 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" media="screen" href="/templates/default/style/login.css"/>
     <style>
-
-        .container-fluid {
-            background-image: url("../templates/default/images/bgc.jpg");
-            padding: 0 0 0 0;
-        }
-
-        .navbar {
-            padding: 0;
-        }
-
-        .container-liquid {
-            background-image: url("../templates/default/images/bgc.jpg");
-            padding-left: 0;
-            padding-right: 0;
-            margin-left: 0;
-            margin-right: 0;
-        }
 
         table {
             text-align: center;
@@ -78,8 +60,8 @@
                 </div>
                 <div class="pull-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/login.html">登录</a></li>
-                        <li><a href="/manager/register.html">注册</a></li>
+                        <li class="success"><a href="/login.html">登录</a></li>
+                        <li class="success"><a href="/static/manager/register.html">注册</a></li>
                         <!--<li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 Java <b class="caret"></b>
@@ -100,52 +82,60 @@
         </nav>
     </div>
     <div class="container-fluid">
-        <form class="form-horizontal" role="form">
-            <div class="form-group">
-                <label for="name" class="col-sm-2 control-label">名称</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="请输入名称">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="born" class="col-sm-2 control-label">年代</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="born" name="born" placeholder="请输入年代">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="inch" class="col-sm-2 control-label">尺寸</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inch" name="inch" placeholder="请输入尺寸（5*10）">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="value" class="col-sm-2 control-label">价值</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="value" name="value" placeholder="请输入价值">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="source" class="col-sm-2 control-label">图片</label>
-                <div class="col-sm-10">
-                    <input type="file" class="form-control" id="source" name="source" placeholder="请选择图片">
-                </div>
-            </div>
-            <!--<div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox">请记住我
-                        </label>
+        <div class="row-fluid">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">编号</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="请输入编号">
                     </div>
                 </div>
-            </div>-->
-            <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" id="submit" class="btn btn-success">添加</button>
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 control-label">名称</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="请输入名称">
+                    </div>
                 </div>
-            </div>
-        </form>
+                <div class="form-group">
+                    <label for="born" class="col-sm-2 control-label">年代</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="born" name="born" placeholder="请输入年代">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inch" class="col-sm-2 control-label">尺寸</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inch" name="inch" placeholder="请输入尺寸（5*10）">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="value" class="col-sm-2 control-label">价值</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="value" name="value" placeholder="请输入价值">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="source" class="col-sm-2 control-label">图片</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control" id="source" name="source" placeholder="请选择图片">
+                    </div>
+                </div>
+                <!--<div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">请记住我
+                            </label>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" id="submit" class="btn btn-success">添加</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 

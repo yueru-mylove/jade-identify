@@ -9,24 +9,16 @@ spring:
     max-wait: 3000
     type: com.alibaba.druid.pool.DruidDataSource
   freemarker:
-    suffix: .html
-    content-type: text/html
+    suffix: .ftl
     charset: utf-8
-    check-template-location: true
-    allow-request-override: false
-    expose-request-attributes: false
-    expose-session-attributes: false
-    expose-spring-macro-helpers: false
-    cache: true
-  resources:
-    static-locations: /META-INF/resources/, classpath:/static/, classpath:/templates/, classpath:/public/
+    prefix:
+    template-loader-path: classpath:/templates
   http:
     multipart:
       enabled: true
       max-file-size: 5MB
 mybatis:
   type-aliases-package: com.jade.bean
-  mapper-locations: classpath:/mybatis/mapper/*.xml
 fdfs:
   so-timeout: 15000
   connect-timeout: 3000
