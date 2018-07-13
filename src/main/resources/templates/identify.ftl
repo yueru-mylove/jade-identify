@@ -9,6 +9,9 @@
     <script type="text/javascript" src="/templates/default/js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript" src="/templates/default/js/jquery.jslides.js"></script>
     <script type="text/javascript" src="/templates/default/js/yz.js"></script>
+<#--    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
+    <script type="text/javascript" src="/js/bootstrap.min.js">-->
 </head>
 <body>
 <div class="top">
@@ -46,15 +49,15 @@
     <div class="i_contact_ul gy">
 
         <ul>
-            <li><a href="tel:" title="24小时服务热线"><img src="/templates/default/images/contact_pic.png">24小时服务热线：13544021311</a>
+            <li><a href="tel:" title="24小时服务热线"><img src="/templates/default/images/contact_pic.png">24小时服务热线：</a>
             </li>
 
             <li><a href="mailto:" title="E-mail"><img src="/templates/default/images/contact_pic2.png">E-mail：</a></li>
 
             <li><a href="javascript:void(0)" id="qqonline_float" title="企业QQ"><img
-                    src="/templates/default/images/contact_pic3.png">微信：cangquancoins</a></li>
+                    src="/templates/default/images/contact_pic3.png">微信：</a></li>
 
-            <li><a href="javascript:void(0)" title="E-mail"><img src="/templates/default/images/contact_pic4.png">香港中环士丹利街24-26号</a>
+            <li><a href="javascript:void(0)" title="E-mail"><img src="/templates/default/images/contact_pic4.png"></a>
             </li>
 
         </ul>
