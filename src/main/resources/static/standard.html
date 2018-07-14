@@ -6,11 +6,50 @@
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <style type="text/css">
+
+        .container-fluid {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .container-fluid div:nth-child(2) {
+            text-align: center;
+        }
+
+        .navbar{
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .leaderboard {
+            text-align: center;
+            background-image: url(/templates/default/images/middle_banner.jpg);
+            background-size: cover;
+            background-position-x: center;
+        }
+
+        footer {
+            background: #333;
+            color: #eee;
+            font-size: 11px;
+            padding: 20px;
+        }
+        ul.unstyled {
+            list-style: none;
+            padding: 0;
+        }
+        footer h6 {
+            color: white;
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-<nav class="navbar navbar-inverse" role="navigation" style="margin: 0; padding: 0">
+<nav class="navbar navbar-expand-xl navbar-inverse navbar-expand-lg" role="navigation" style="margin: 0; padding: 0">
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">保利鉴定</a>
@@ -36,96 +75,174 @@
                 </li>
             </ul>
         </div>
-        <div class="nav navbar-nav pull-right">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/login.html">登录</a></li>
-                <li><a href="/static/manager/register.html">注册</a></li>
-                <!--<li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Java <b class="caret"></b>
-                    </a>
+                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">jmeter</a></li>
-                        <li><a href="#">EJB</a></li>
-                        <li><a href="#">Jasper Report</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">分离的链接</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">另一个分离的链接</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
                     </ul>
-                </li>-->
+                </li>
             </ul>
-        </div>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
     </div>
 </nav>
-
-<div class="container-fluid" style="height: 100%; background-color: #9fcdff; text-align: center; margin: 0">
-    <div class="row col-md-4">
-
+<div class="container-fluid">
+    <div class="leaderboard">
+        <!--<img src="/templates/default/images/middle_banner.jpg" class="img-fluid">-->
+        <h1>w3cschool Web Store</h1>
+        <p>Try and purchase HTML5, JS, Ruby, PHP-MySQL based web apps to enhance your productivity at affordable
+            price.</p>
+        <p>
+            <br/>
+            <br/>
+            <br/>
+            <br/><br/><br/><br/><br/>
+            <br /><br />
+            <br />
+            <br />
+            <br /><br />
+            <a class="btn btn-success btn-large">Sign Up for a 30 day free trial</a></p>
     </div>
-    <div class="row col-md-8">
-        <div id="criteria">
-            <h1 align="center">
-                <span style="color:#000000;">CCGA&nbsp; 古币评级标准</span>
-            </h1>
-            <!--
-                <p>
-                    <br />
+    <div class="row">
+
+        <div class="row col-md-2">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-danger" style="font-size: 50px">评级标准</li>
+                <li class="list-group-item list-group-item-action nav nav-pills nav-stacked"><a href="#">古币评级标准</a></li>
+                <li class="list-group-item list-group-item-action nav nav-pills nav-stacked"><a href="#">银币评级标准</a></li>
+                <li class="list-group-item list-group-item-action nav nav-pills nav-stacked"><a href="#">纸币评级标准</a></li>
+                <li class="list-group-item list-group-item-action nav nav-pills nav-stacked"><a href="#">邮票评级标准</a></li>
+            </ul>
+        </div>
+        <div class="row col-md-10">
+            <div id="criteria">
+                <h1 align="center">
+                    <span style="color:#000000;">CCGA&nbsp; 古币评级标准</span>
+                </h1>
+                <table class="table table-hover table-condensed table-bordered">
+                    <tbody>
+                    <tr class="active">
+                        <td>
+                            <span style="font-size:12px;">上品40-49</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;">文字可以识别但边道不完整或有轻微或严重腐蚀，并且锈色不够完美。</span>
+                        </td>
+                    </tr>
+                    <tr class="active">
+                        <td>
+                            <span style="font-size:12px;">上品50-59</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;">文字可以识别细节完整，但字口不够深峻，锈色过重，或包浆不够完美。边道有少许缺陷。</span>
+                        </td>
+                    </tr>
+                    <tr class="active">
+                        <td>
+                            <span style="font-size:12px;">美品60-69</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;">字口清晣，边道完整，穿口规整，没有明显腐蚀和铸造缺陷。并且没有明显的人为清理。</span>
+                        </td>
+                    </tr>
+                    <tr class="active">
+                        <td>
+                            <span style="font-size:12px;">美品70-79</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;">字口深峻，边道完整，锈色相对完美，几乎没有腐蚀和铸造缺陷。并且边道几乎没有缺陷。</span>
+                        </td>
+                    </tr>
+                    <tr class="active">
+                        <td>
+                            <span style="font-size:12px;">极品80-100</span>
+                        </td>
+                        <td>
+                            <span style="font-size:12px;">口深峻，边道完整，穿口规整，没有腐蚀和铸造缺陷，锈色完美。</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p style="line-height:50px;">
+                    <span style="font-size:12px;color:#000000;">评级代号代表含义: L (裂.暗裂) B (修补) C (有戳记)&nbsp;D (有洞) S (私铸) Q (不平.有明显的翘) E (有铸造缺陷)&nbsp;F (表面严重腐蚀)</span>
                 </p>
-            -->
-            <table>
-                <tbody>
-                <tr>
-                    <td>
-                        <span style="font-size:12px;">上品40-49</span>
-                    </td>
-                    <td>
-                        <span style="font-size:12px;">文字可以识别但边道不完整或有轻微或严重腐蚀，并且锈色不够完美。</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span style="font-size:12px;">上品50-59</span>
-                    </td>
-                    <td>
-                        <span style="font-size:12px;">文字可以识别细节完整，但字口不够深峻，锈色过重，或包浆不够完美。边道有少许缺陷。</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span style="font-size:12px;">美品60-69</span>
-                    </td>
-                    <td>
-                        <span style="font-size:12px;">字口清晣，边道完整，穿口规整，没有明显腐蚀和铸造缺陷。并且没有明显的人为清理。</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span style="font-size:12px;">美品70-79</span>
-                    </td>
-                    <td>
-                        <span style="font-size:12px;">字口深峻，边道完整，锈色相对完美，几乎没有腐蚀和铸造缺陷。并且边道几乎没有缺陷。</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span style="font-size:12px;">极品80-100</span>
-                    </td>
-                    <td>
-                        <span style="font-size:12px;">口深峻，边道完整，穿口规整，没有腐蚀和铸造缺陷，锈色完美。</span>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <p style="line-height:50px;">
-                <span style="font-size:12px;color:#000000;">评级代号代表含义: L (裂.暗裂) B (修补) C (有戳记)&nbsp;D (有洞) S (私铸) Q (不平.有明显的翘) E (有铸造缺陷)&nbsp;F (表面严重腐蚀)</span>
-            </p>
-            <p class="dayin">
-                <a href="javascript:window.print();">【打印】</a>
-            </p>
+                <p class="dayin">
+                    <a href="javascript:window.print();">【打印】</a>
+                </p>
+            </div>
         </div>
     </div>
 </div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <h6>Copyright &copy;新浪体育</h6>
+            </div>
+
+            <div class="col-sm-4">
+                <h6>关于我们</h6>
+                <p>
+                    中国上海/2014年8月14日 — 服务于中国及全球华人社群的领先在线媒体公司新浪公司(NASDAQ GS: SINA)今日公布了截至2014年6月30日的第二季度未经审计的财务报告。
+                </p>
+            </div>
+
+            <div class="col-sm-2">
+                <h6>导航</h6>
+                <ul class="unstyled">
+                    <li><a href="">主页</a></li>
+                    <li><a href="">服务</a></li>
+                    <li><a href="">链接</a></li>
+                    <li><a href="">联系我们</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-2">
+                <h6>Follow us</h6>
+                <ul class="unstyled">
+                    <li><a href="">微博</a></li>
+                    <li><a href="">微信</a></li>
+                    <li><a href="">来往</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-2">
+                <h6>本网站由<span class="glyphicon glyphicon-heart"></span>Darren制作</h6>
+            </div>
+        </div>
+    </div>
+</footer><!--页脚结束-->
 
 <script>
     $(function () {
