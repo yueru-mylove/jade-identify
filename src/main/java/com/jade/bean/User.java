@@ -11,10 +11,6 @@ public class User {
 
     private String phone;
 
-    private Integer retryTimes;
-
-    private String token;
-
     public Integer getId() {
         return id;
     }
@@ -53,21 +49,5 @@ public class User {
 
     public void setPhone(String phone) {
         this.phone = phone == null ? null : phone.trim();
-    }
-
-    public Integer getRetryTimes() {
-        return retryTimes;
-    }
-
-    public void setRetryTimes(Integer retryTimes) {
-        this.retryTimes = retryTimes;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token == null ? null : token.trim();
     }
 }

@@ -1,19 +1,11 @@
 package com.jade.bean;
 
-import java.util.Date;
-
 public class Jade {
     private Integer id;
 
     private String name;
 
-    private Date createtime;
-
-    private Date updatetime;
-
     private String source;
-
-    private String clickcount;
 
     private String born;
 
@@ -23,8 +15,15 @@ public class Jade {
 
     private String material;
 
-    private String number;
+    private Integer number;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -34,36 +33,12 @@ public class Jade {
         this.name = name == null ? null : name.trim();
     }
 
-    public Date getCreatetime() {
-        return createtime;
-    }
-
-    public void setCreatetime(Date createtime) {
-        this.createtime = createtime;
-    }
-
-    public Date getUpdatetime() {
-        return updatetime;
-    }
-
-    public void setUpdatetime(Date updatetime) {
-        this.updatetime = updatetime;
-    }
-
     public String getSource() {
         return source;
     }
 
     public void setSource(String source) {
         this.source = source == null ? null : source.trim();
-    }
-
-    public String getClickcount() {
-        return clickcount;
-    }
-
-    public void setClickcount(String clickcount) {
-        this.clickcount = clickcount == null ? null : clickcount.trim();
     }
 
     public String getBorn() {
@@ -98,11 +73,11 @@ public class Jade {
         this.material = material == null ? null : material.trim();
     }
 
-    public String getNumber() {
+    public Integer getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
-        this.number = number == null ? null : number.trim();
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 }

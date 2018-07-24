@@ -27,6 +27,4 @@ public interface JadeMapper {
     int updateByPrimaryKeySelective(Jade record);
 
     int updateByPrimaryKey(Jade record);
-
-    int insertJadeInfo(Jade jade);
 }

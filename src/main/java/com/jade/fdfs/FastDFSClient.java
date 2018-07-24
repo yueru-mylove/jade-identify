@@ -8,10 +8,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.stereotype.Component;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 @Component
 public class FastDFSClient {
@@ -23,9 +25,11 @@ public class FastDFSClient {
     static {
 
         try {
+
             Resource resource = new ClassPathResource("fdfs_client.conf");
             File file = resource.getFile();
             String absolutePath = file.getAbsolutePath();
+            System.out.println(absolutePath);
             ClientGlobal.init(absolutePath);
             TrackerClient trackerClient = new TrackerClient(ClientGlobal.g_tracker_group);
 

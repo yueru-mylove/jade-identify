@@ -1,6 +1,5 @@
 package com.jade.result;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 public class Result {
 

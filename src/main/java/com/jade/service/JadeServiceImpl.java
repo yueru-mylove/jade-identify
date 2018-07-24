@@ -45,9 +45,7 @@ public class JadeServiceImpl implements JadeService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public boolean addJade(Jade jade) {
-        Integer clickcount = (int)(100 * Math.random()) + 1;
-        jade.setClickcount(clickcount.toString());
-        int insert = jadeMapper.insertJadeInfo(jade);
+        int insert = jadeMapper.insert(jade);
         if (insert == 1) {
             return true;
         }

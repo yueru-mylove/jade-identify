@@ -1,6 +1,6 @@
 package com.jade.test;
 
-import com.alibaba.fastjson.JSONArray;
+/*import com.alibaba.fastjson.JSONArray;
 import com.jade.fdfs.FastDFSClient;
 import com.jade.fdfs.FastDSFile;
 import org.junit.Test;
@@ -14,11 +14,11 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest*/
 public class DemoSpringbootFastdfsApplicationTests {
 
 
-    @Test
+  /*  @Test
     public void contextLoads() {
         try {
             FileInputStream fis = new FileInputStream(new File("C:\\Users\\wangwanjun\\Desktop\\logo1.png"));
@@ -38,23 +38,23 @@ public class DemoSpringbootFastdfsApplicationTests {
             System.out.println("上传结束:" + rs);
 
             // -------下载----
-           /* byte[] dfile = FastDFSClient.download(rs.getString(0), rs.getString(1));
+           *//* byte[] dfile = FastDFSClient.download(rs.getString(0), rs.getString(1));
 
             FileOutputStream fos = new FileOutputStream(new File("C:/Users/xq/Pictures/tx-fdfs.jpg"));
             fos.write(dfile);
             fos.flush();
             fos.close();
-*/
-          /*  // -------删除-----
+*//*
+          *//*  // -------删除-----
             int ds=FastDFSClient.delete(rs.getString(0), rs.getString(1));
             //
             System.out.println("Delete:"+ds);
             System.out.println("---End----");
-*/
+*//*
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-    }
+    }*/
 
 }
