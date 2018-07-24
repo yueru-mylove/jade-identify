@@ -19,6 +19,7 @@ import javax.sql.DataSource;
 public class DataSourceConfig {
 
 
+
     @Value("${spring.datasource.driver-class-name}")
     private String driver;
     @Value("${spring.datasource.url}")
@@ -27,6 +28,7 @@ public class DataSourceConfig {
     private String username;
     @Value("${spring.datasource.password}")
     private String password;
+
 
 
     @Bean
