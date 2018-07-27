@@ -1,5 +1,9 @@
 package com.jade.test;
 
+import io.netty.util.internal.shaded.org.jctools.queues.MpscChunkedArrayQueue;
+
+import java.util.concurrent.*;
+
 /*import com.alibaba.fastjson.JSONArray;
 import com.jade.fdfs.FastDFSClient;
 import com.jade.fdfs.FastDSFile;
@@ -57,4 +61,63 @@ public class DemoSpringbootFastdfsApplicationTests {
 
     }*/
 
+
+    static  class ThreadDivTest implements Callable {
+
+        private int a;
+        private int b;
+
+        public ThreadDivTest() {
+
+        }
+
+        public ThreadDivTest(int a, int b) {
+            this.a = a;
+            this.b = b;
+        }
+
+        public int getA() {
+            return a;
+        }
+
+        public void setA(int a) {
+            this.a = a;
+        }
+
+        public int getB() {
+            return b;
+        }
+
+        public void setB(int b) {
+            this.b = b;
+        }
+
+        @Override
+        public String toString() {
+            return "ThreadDivTest{" +
+                    "a=" + a +
+                    ", b=" + b +
+                    '}';
+        }
+
+        @Override
+        public Object call() throws Exception {
+            return a / b;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Executor executor = new ThreadPoolExecutor(Runtime.getRuntime().availableProcessors(), 100, 300, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>());
+
+        for (int i = 0; i < 5; i++) {
+            Future<?> submit = ((ThreadPoolExecutor) executor).submit(new ThreadDivTest(100, i));
+            try {
+                Object o = submit.get();
+                System.out.println(o.getClass());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }

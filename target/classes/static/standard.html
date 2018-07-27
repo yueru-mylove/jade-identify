@@ -6,7 +6,88 @@
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/templates/default/style/css.css">
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+        .banner_box{
+            position: relative; /*attention*/
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+        .banner_images{
+            position: absolute; /*attention*/
+            left: 0;
+            width: 500%; /*attention please*/
+        }
+        .banner_img{
+            float: left;
+            width: 20%; /*attention please*/
+            height: 600px;
+        }
+        .banner_img img{
+            width: 100%;
+            height: 600px;
+        }
 
+        .switcher{
+            position: absolute;
+            top: 285px;
+            width: 100%;
+            display: none;
+        }
+        .switcher p{
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            background: rgba(0, 0, 0, .8);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .switcher .prev{
+            float: left;
+            margin-left: 50px
+        }
+        .switcher .next{
+            float: right;
+            margin-right: 50px;
+        }
+        .banner_box:hover .switcher{
+            display: block;
+        }
+        .points{
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            width: 400px;
+            margin-left: -200px;
+            overflow: hidden;
+        }
+        .points li{
+            width: 100px;
+            height: 5px;
+            background: rgba(0, 0, 0, .8);
+            float: left;
+            list-style: none;
+            cursor: Crosshair;
+        }
+        .points li.point_on{
+            background: #C92027;
+        }
+
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,29 +98,63 @@
         <div class="logo fl"><a href="/"><img src="/templates/default/images/logo1.png"></a></div>
         <div class="menu fr">
             <ul>
-                <li class="on"><a href="/"><span>网站首页</span><em></em><label>HOME</label></a></li>
-                <li><a href="/about/"><span>公司简介</span><em></em><label>ABOUT</label></a></li>
-                <li><a href="/culture/"><span>企业文化</span><em></em><label>CULTURE</label></a></li>
-                <li><a href="/article/"><span>新闻中心</span><em></em><label>NEWS</label></a></li>
-                <li><a href="/biaozhun"><span>收费标准</span><em></em><label>SOLUTIONS</label></a></li>
-                <li><a href="/jade/search"><span>古币鉴定</span><em></em><label>COINS</label></a></li>
-                <li><a href="/message/"><span>在线反馈</span><em></em><label>MESSAGE</label></a></li>
-                <li><a href="/contact/"><span>联系我们</span><em></em><label>CONTACT</label></a></li>
+                <li class="on"><a href="/"><span>网站首页</span><label>HOME</label></a></li>
+                <li><a href="/about/"><span>公司简介</span><label>ABOUT</label></a></li>
+                <li><a href="/culture/"><span>企业文化</span><label>CULTURE</label></a></li>
+                <li><a href="/article/"><span>新闻中心</span><label>NEWS</label></a></li>
+                <li><a href="/biaozhun"><span>收费标准</span><label>SOLUTIONS</label></a></li>
+                <li><a href="/jade/search"><span>古币鉴定</span><label>COINS</label></a></li>
+                <li><a href="/message/"><span>在线反馈</span><label>MESSAGE</label></a></li>
+                <li><a href="/contact/"><span>联系我们</span><label>CONTACT</label></a></li>
             </ul>
         </div>
     </div>
 </div>
 
-<div class="container-fluid" style="height: 100%; background-color: #9fcdff; text-align: center; margin: 0">
-    <div class="row col-md-4">
+<div class="mainer">
+    <div class="banner_box">
+        <div class="banner_images">
+            <div class="banner_img"><a href=""><img src="/templates/default/images/1.jpg" alt="bannerOne"></a></div>
+            <div class="banner_img"><a href=""><img src="/templates/default/images/2.jpg" alt="bannerTwo"></a></div>
+            <div class="banner_img"><a href=""><img src="/templates/default/images/3.jpg" alt="bannerThree"></a></div>
+            <div class="banner_img"><a href=""><img src="/templates/default/images/4.jpg" alt="bannerFour"></a></div>
+        </div>
 
+        <div class="switcher">
+            <p class="prev">←</p>
+            <p class="next">→</p>
+        </div>
+
+        <ul class="points">
+            <li class="point_on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
-    <div class="row col-md-8">
-        <div id="criteria">
+
+    <div class="row">
+        <div class="col-md-4">
+            <div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="container-fluid" style="border: 2px red solid">
+
+                            </div>
+                            <div class="container-fluid" style="border: 2px red solid">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="criteria" class="col-md-8">
             <h1 align="center">
-                <span style="color:#000000;">CCGA&nbsp; 古币评级标准</span>
+                <span style="color:#000000; font-size: larger">CCGA&nbsp; 评级标准</span>
             </h1>
-            <table>
+            <table class="table table-active table-condensed table-bordered">
                 <tbody>
                 <tr>
                     <td>
@@ -93,9 +208,90 @@
         </div>
     </div>
 </div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <h6>保利鉴定</h6>
+            </div>
+
+            <div class="col-sm-4">
+                <h6>关于我们</h6>
+                <p>
+                    中国上海/2014年8月14日 — 服务于中国及全球华人社群的领先在线媒体公司新浪公司(NASDAQ GS: SINA)今日公布了截至2014年6月30日的第二季度未经审计的财务报告。
+                </p>
+            </div>
+
+            <div class="col-sm-2">
+                <h6>导航</h6>
+                <ul class="unstyled">
+                    <li><a href="">主页</a></li>
+                    <li><a href="">服务</a></li>
+                    <li><a href="">链接</a></li>
+                    <li><a href="">联系我们</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-2">
+                <h6>Follow us</h6>
+                <ul class="unstyled">
+                    <li><a href="">微博</a></li>
+                    <li><a href="">微信</a></li>
+                    <li><a href="">来往</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-2">
+                <h6>本网站由<span class="glyphicon glyphicon-heart"></span>本*拉通制作</h6>
+            </div>
+        </div>
+    </div>
+</footer><!--页脚结束-->
 
 <script>
     $(function () {
+
+        var img = $('.banner_images div:eq(0)').clone()
+        $('.banner_images').append(img);
+        var img_length = $('.banner_img').length; //图片的张数
+        var width = $('.banner_img').width()
+        var i  = 0;
+        function banner(){ //轮播函数
+            i++;
+            if(i < 0){
+                i = img_length - 1;
+                $('.banner_images').css({'left': (-i*width)+'px'});
+            }
+            if(i > img_length-1){
+                i = 1;
+                $('.banner_images').css({'left': 0});
+            }
+            $('.banner_images').animate({'left': (-i*width)+'px'});
+            $('.points li').eq(i%4).addClass('point_on').siblings().removeClass();
+
+        }
+        var banner_timer = setInterval(banner, 3000);
+
+        $('.switcher p').hover(function(){	//鼠标移入左右切换箭头清除定时器使轮播停止
+            clearInterval(banner_timer);
+        },function(){	//鼠标移出切换箭头还原定时器，这里为避免定时器重复 还将定时器赋值给上边定义的banner_timer变量
+            banner_timer = setInterval(banner, 3000);
+        });
+
+        $('.switcher p').click(function(){	//点击左右箭头使图片左右切换
+            if($(this).attr('class') == 'prev'){
+                i -= 2;
+                banner();
+            }else{
+                // i += 1;
+                banner();
+            }
+        })
+
+        $('.points li').click(function(){	//点击相应的焦点跳转到对应图片
+            i = $(this).index();
+            banner();
+        });
 
         $("button").click(function () {
             var result = $("#msform").submit;

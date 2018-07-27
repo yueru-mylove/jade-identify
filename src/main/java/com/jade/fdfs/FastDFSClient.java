@@ -1,45 +1,50 @@
 package com.jade.fdfs;
 
-import com.alibaba.fastjson.JSONArray;
 import org.csource.common.MyException;
-import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.stereotype.Component;
+import org.springframework.util.ClassUtils;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Properties;
 
 @Component
 public class FastDFSClient {
 
-
     private static StorageClient1 storageClient;
     private static final Logger LOGGER = LoggerFactory.getLogger(FastDFSClient.class);
-
     static {
 
         try {
 
-            Resource resource = new ClassPathResource("fdfs_client.conf");
-            File file = resource.getFile();
-            String absolutePath = file.getAbsolutePath();
-            System.out.println(absolutePath);
-            ClientGlobal.init(absolutePath);
+            Properties properties = new Properties();
+            properties.put(ClientGlobal.PROP_KEY_TRACKER_SERVERS, "47.93.219.222:22122");
+            properties.put(ClientGlobal.PROP_KEY_HTTP_SECRET_KEY, "FastDFS1234567890");
+            properties.put(ClientGlobal.PROP_KEY_HTTP_TRACKER_HTTP_PORT, "80");
+            properties.put(ClientGlobal.PROP_KEY_CHARSET, "UTF-8");
+            properties.put(ClientGlobal.PROP_KEY_HTTP_ANTI_STEAL_TOKEN, false);
+
+            /*String path = ClassUtils.class.getClassLoader().getResource("fastdfs-client.properties").getPath();
+            System.out.println(path);
+            File file = new File(path);*/
+            ClientGlobal.initByProperties(properties);
             TrackerClient trackerClient = new TrackerClient(ClientGlobal.g_tracker_group);
 
             TrackerServer trackerServer = trackerClient.getConnection();
             StorageServer storageServer = trackerClient.getStoreStorage(trackerServer);
             storageClient = new StorageClient1(trackerServer, storageServer);
             System.out.println("client init success ... ... ");
+            LOGGER.info("client init success ... ...");
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println("client init failed ... ... ");
+            LOGGER.error("client init failed ... ...");
         }
 
     }

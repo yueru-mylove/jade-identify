@@ -174,6 +174,7 @@
                     dataType: "JSON",
                     success: function (result) {
                         filePath = result.data;
+                        alert("上传成功！")
                     },
                     error: function (result) {
                         alert("上传失败，请重新上传！");

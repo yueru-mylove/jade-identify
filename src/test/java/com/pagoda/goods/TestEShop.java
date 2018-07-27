@@ -2,7 +2,6 @@ package com.pagoda.goods;
 
 
 import com.alibaba.fastjson.JSONArray;
-import com.jade.fdfs.FastDFSClient;
 import com.jade.fdfs.FastDSFile;
 import org.csource.fastdfs.*;
 import org.junit.Test;
@@ -94,7 +93,7 @@ public class TestEShop {
     public void test() {
 
         try {
-            Resource resource = new ClassPathResource("fdfs_client.conf");
+            Resource resource = new ClassPathResource("fastdfs-client.properties");
             File file = resource.getFile();
             String absolutePath = file.getAbsolutePath();
             ClientGlobal.init(absolutePath);
