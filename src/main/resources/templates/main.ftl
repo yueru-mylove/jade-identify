@@ -7,31 +7,141 @@
     <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-
         table {
             text-align: center;
             border-width: 0px;
             padding: 0px;
             border-collapse: collapse;
         }
-
         table tr {
             text-align: center;
         }
-
         tr td {
             width: 500px;
             height: auto;
             vertical-align: middle;
         }
-
-
     </style>
+    <script>
 
+        var filePath = "";
+        var positivePath = "";
+        var negativePath = "";
+        function fileUpload (obj) {
+            console.log(obj);
+            var file = obj.files[0];
+            if (!file) {
+                alert("请选择图片！");
+                return;
+            }
+            var checkResult = verificationPicFile(file);
+            if (obj.files && file) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $(obj).parents(".form-group").siblings("div").find("img").attr("src", e.target.result);
+                };
+                reader.readAsDataURL(file);
+            }
+            var formData = new FormData();
+            formData.append("file", file);
+            if (checkResult == true) {
+                $.ajax({
+                    url: "/jade/file/upload",
+                    type: "Post",
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    data: formData,
+                    dataType: "JSON",
+                    success: function (result) {
+                        if (positivePath == "") {
+                            positivePath = result.data;
+                        } else {
+                            negativePath = result.data;
+                        }
+                        alert("上传成功！")
+                    },
+                    error: function (result) {
+                        alert("上传失败，请重新上传！");
+                    }
+                });
+            }
+        };
+
+        function verificationPicFile(file) {
+            var fileTypes = [".jpg", ".png", ".jpeg", ".gif"];
+            var filePath = file.name;
+            //当括号里面的值为0、空字符、false 、null 、undefined的时候就相当于false
+            if (filePath) {
+                var isNext = false;
+                var fileEnd = filePath.substring(filePath.indexOf("."));
+                for (var i = 0; i < fileTypes.length; i++) {
+                    if (fileTypes[i] == fileEnd) {
+                        isNext = true;
+                        break;
+                    }
+                }
+                if (!isNext) {
+                    alert('不接受此文件类型');
+                    file.value = "";
+                    return false;
+                }
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        $(function () {
+            $("#submit").click(function () {
+                if (positivePath == "") {
+                    alert("正面图片上传失败，请重新上传！！！");
+                    return;
+                }
+                if (negativePath == "") {
+                    alert("反面图片上传失败，请重新上传！！！");
+                    return;
+                }
+                var infoForm = new FormData();
+                var name = $("#name").val();
+                var number = $("#number").val();
+                var material = $("#material").val();
+                var born = $("#born").val();
+                var inch = $("#inch").val();
+                var value = $("#value").val();
+                $.ajax({
+                    url: "/jade/info/add",
+                    type: "post",
+                    cache: "false",
+                    data: {
+                        "id": number,
+                        "name": name,
+                        "material": material,
+                        "born": born,
+                        "inch": inch,
+                        "value": value,
+                        "source": positivePath + "," + negativePath,
+                        "number": number
+                    },
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.code == 0) {
+                            alert("上传成功！")
+                        } else {
+                            alert("上传失败！")
+                        }
+                    },
+                    error: function (result) {
+                        alert("上传失败！")
+                    }
+                })
+            });
+        })
+    </script>
 </head>
 <body>
 
-<div id="main" name="main">
+<div id="main">
     <div>
         <nav class="navbar navbar-inverse" role="navigation">
             <div class="container-fluid">
@@ -83,6 +193,36 @@
     </div>
     <div class="container-fluid">
         <div class="row-fluid">
+            <form id="uploadPositiveForm" class="form-horizontal" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="source" class="col-sm-2 control-label">图片</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control icon-upload" id="positive" name="positive" placeholder="请选择正面图片"
+                               onchange="fileUpload(this)"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pre-view" class="col-sm-2 control-label">预览</label>
+                    <div class="col-sm-10">
+                        <img id="img1" src="" width="200px" height="160px" aria-placeholder="正面图片"/>
+                    </div>
+                </div>
+            </form>
+            <form id="uploadNegativeForm" class="form-horizontal" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="source" class="col-sm-2 control-label">图片</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control icon-upload" id="negative" name="negative" placeholder="请选择背面图片"
+                               onchange="fileUpload(this)"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pre-view" class="col-sm-2 control-label">预览</label>
+                    <div class="col-sm-10">
+                        <img id="img1" src="" width="200px" height="160px" aria-placeholder="背面图片"/>
+                    </div>
+                </div>
+            </form>
             <form class="form-horizontal" role="form">
                 <div class="form-group">
                     <label for="name" class="col-sm-2 control-label">编号</label>
@@ -120,135 +260,16 @@
                         <input type="text" class="form-control" id="material" name="material" placeholder="请输入材质">
                     </div>
                 </div>
-                <form id="uploadForm" class="form-control" enctype="multipart/form-data">
-                    <div class="form-group">
-                        <label for="source" class="col-sm-2 control-label">图片</label>
-                        <div class="col-sm-10">
-                            <input type="file" class="form-control" id="source" name="source" placeholder="请选择图片">
-                        </div>
-                    </div>
-                </form>
-                <!--<div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox">请记住我
-                            </label>
-                        </div>
-                    </div>
-                </div>-->
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <button type="button" id="submit" class="btn btn-success">添加</button>
                     </div>
                 </div>
             </form>
+
         </div>
     </div>
 </div>
-
-
-<script type="text/javascript" src="/templates/default/js/jquery-1.8.0.min.js"/>
-<script type="text/javascript" src="/js/bootstrap.min.js"></script>
-<script>
-    $(function () {
-
-        var filePath = "";
-        $("#source").change(function () {
-            var file = document.getElementById("source").files[0];
-            if (!file) {
-                alert("请选择图片！")
-                return;
-            }
-            var checkResult = verificationPicFile(file);
-            var formData = new FormData();
-            formData.append("file", file);
-            if (checkResult == true) {
-                $.ajax({
-                    url: "/jade/file/upload",
-                    type: "Post",
-                    cache: false,
-                    processData: false,
-                    contentType: false,
-                    data: formData,
-                    dataType: "JSON",
-                    success: function (result) {
-                        filePath = result.data;
-                        alert("上传成功！")
-                    },
-                    error: function (result) {
-                        alert("上传失败，请重新上传！");
-                    }
-                });
-            }
-        });
-
-
-        $("#submit").click(function () {
-
-            var infoForm = new FormData();
-            var name = $("#name").val();
-            var number = $("#number").val();
-            var material = $("#material").val();
-            var born = $("#born").val();
-            var inch = $("#inch").val();
-            var value = $("#value").val();
-            $.ajax({
-                url: "/jade/info/add",
-                type: "post",
-                cache: "false",
-                data: {
-                    "id" : number,
-                    "name" : name,
-                    "material" : material,
-                    "born" : born,
-                    "inch" : inch,
-                    "value" : value,
-                    "source" : filePath,
-                    "number" : number
-                },
-                dataType : "json",
-                success: function (result) {
-                    if (result.code == 0) {
-                        alert("上传成功！")
-                    } else {
-                        alert("上传失败！")
-                    }
-                },
-                error: function (result) {
-                    alert("上传失败！")
-                }
-            })
-        });
-
-
-        function verificationPicFile(file) {
-            var fileTypes = [".jpg", ".png", ".jpeg", ".gif"];
-            var filePath = file.name;
-            //当括号里面的值为0、空字符、false 、null 、undefined的时候就相当于false
-            if (filePath) {
-                var isNext = false;
-                var fileEnd = filePath.substring(filePath.indexOf("."));
-                for (var i = 0; i < fileTypes.length; i++) {
-                    if (fileTypes[i] == fileEnd) {
-                        isNext = true;
-                        break;
-                    }
-                }
-                if (!isNext) {
-                    alert('不接受此文件类型');
-                    file.value = "";
-                    return false;
-                }
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-
-    })
-</script>
 
 </body>
 </html>

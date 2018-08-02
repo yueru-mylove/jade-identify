@@ -4,14 +4,9 @@ import org.csource.common.MyException;
 import org.csource.fastdfs.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
-import org.springframework.util.ClassUtils;
 
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Properties;
 
 @Component
@@ -30,9 +25,6 @@ public class FastDFSClient {
             properties.put(ClientGlobal.PROP_KEY_CHARSET, "UTF-8");
             properties.put(ClientGlobal.PROP_KEY_HTTP_ANTI_STEAL_TOKEN, false);
 
-            /*String path = ClassUtils.class.getClassLoader().getResource("fastdfs-client.properties").getPath();
-            System.out.println(path);
-            File file = new File(path);*/
             ClientGlobal.initByProperties(properties);
             TrackerClient trackerClient = new TrackerClient(ClientGlobal.g_tracker_group);
 

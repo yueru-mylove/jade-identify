@@ -2,43 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c05ad06a-0253-439c-9e5a-178c150179e5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jade/config/FdfsClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fastdfs-client.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/homefast_nav.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/homefast_navxl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-1.5.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/nanyang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/banner0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/banner1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/banner3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/banner4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/banner5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/images/img4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/zhenping.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jade/ApplicationServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jade/ApplicationServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jade/controller/JadeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jade/controller/JadeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jade/fdfs/FastDFSClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jade/fdfs/FastDFSClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jade/test/DemoSpringbootFastdfsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jade/test/DemoSpringbootFastdfsApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fdfs_client.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/standard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/standard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/templates/default/style/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/templates/default/style/css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/zhenping.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/zhenping.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/pagoda/goods/TestEShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pagoda/goods/TestEShop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MBGTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MBGTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fdfs_client.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/standard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/standard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/templates/default/style/css.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/templates/default/style/css.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/pagoda/goods/TestEShop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/pagoda/goods/TestEShop.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,7 +23,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/jade_identify$ApplicationServer.ic" NAME="ApplicationServer Coverage Results" MODIFIED="1531721554740" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/jade_identify$ApplicationServer.ic" NAME="ApplicationServer Coverage Results" MODIFIED="1532917581492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.jade.*</FILTER>
     </SUITE>
   </component>
@@ -74,8 +46,8 @@
       <file leaf-file-name="standard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/standard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+            <state relative-caret-position="3184">
+              <caret line="199" column="41" selection-start-line="199" selection-start-column="41" selection-end-line="199" selection-end-column="41" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -97,11 +69,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="FastDFSClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jade/fdfs/FastDFSClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="688">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/manager/main.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2064">
-              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+              <caret line="129" selection-start-line="129" selection-end-line="129" />
             </state>
           </provider>
         </entry>
@@ -110,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/fastdfs-client.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
-              <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+              <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -118,26 +102,17 @@
       <file leaf-file-name="login.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1328">
-              <caret line="83" column="12" lean-forward="true" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
+            <state relative-caret-position="544">
+              <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WindowsSelectorImpl.class" pinned="false" current-in-tab="true">
-        <entry file="jar://D:/D/jdk/jre/lib/rt.jar!/sun/nio/ch/WindowsSelectorImpl.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="329" column="21" lean-forward="true" selection-start-line="329" selection-start-column="21" selection-end-line="329" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.ftl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.ftl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1072">
-              <caret line="178" column="46" lean-forward="true" selection-start-line="178" selection-start-column="46" selection-end-line="178" selection-end-column="46" />
+            <state relative-caret-position="334">
+              <caret line="102" column="27" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -145,8 +120,8 @@
       <file leaf-file-name="zhenping.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/zhenping.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="417" column="26" selection-start-line="417" selection-start-column="26" selection-end-line="417" selection-end-column="26" />
+            <state relative-caret-position="4608">
+              <caret line="288" column="44" selection-start-line="288" selection-start-column="44" selection-end-line="288" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#h1#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -172,7 +147,7 @@
       <file leaf-file-name="JadeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/jade/controller/JadeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
+            <state relative-caret-position="768">
               <caret line="67" selection-start-line="67" selection-end-line="67" />
             </state>
           </provider>
@@ -181,8 +156,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1364">
-              <caret line="48" column="33" lean-forward="true" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
+            <state relative-caret-position="768">
+              <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
               <folding>
                 <element signature="n#style#0;n#p#2;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -218,6 +193,10 @@
       <find>about_banCen</find>
       <find>12</find>
       <find>IntSupplier</find>
+      <find>143.</find>
+      <find>143.159.</find>
+      <find>fileUpload</find>
+      <find>source</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -279,9 +258,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/fdfs_client.conf" />
         <option value="$PROJECT_DIR$/src/main/resources/fdfs_client.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/fdfs-client.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/nanyang.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/jade/fdfs/FastDFSClient.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/zhenping.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/nanyang.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/standard.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/main.ftl" />
       </list>
@@ -317,16 +296,15 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="770" />
     <option name="width" value="963" />
-    <option name="height" value="1040" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -402,23 +380,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jade-identify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jade-identify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jade-identify" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jade-identify" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -431,11 +392,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="waitForHelperThreads&#9;PSI&#9;JAVA://sun.nio.ch.WindowsSelectorImpl.FinishLock#waitForHelperThreads&#10;Admi&#9;PSI&#9;JAVA://com.jade.controller.AdministorController&#10;stan&#9;FILE&#9;file://D:/E/base_exer/jade-identify/src/main/resources/static/standard.html&#10;NIO&#9;FILE&#9;jar://C:/Users/wangwanjun/.m2/repository/io/netty/netty-transport/4.1.11.Final/netty-transport-4.1.11.Final.jar!/io/netty/channel/nio/NioEventLoop.class&#10;JarResourceMa&#9;PSI&#9;JAVA://org.springframework.boot.context.embedded.undertow.JarResourceManager&#10;Launcher&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner&#10;ResourceUt&#9;FILE&#9;jar://C:/Users/wangwanjun/.m2/repository/org/springframework/spring-core/4.3.13.RELEASE/spring-core-4.3.13.RELEASE-sources.jar!/org/springframework/util/ResourceUtils.java&#10;NioEvent&#9;PSI&#9;JAVA://io.netty.channel.nio.NioEventLoop&#10;EventLoop&#9;PSI&#9;JAVA://io.netty.channel.EventLoop&#10;IOUtils&#9;PSI&#9;JAVA://org.apache.commons.io.IOUtils&#10;ChannelFuture&#9;PSI&#9;JAVA://io.netty.channel.ChannelFuture&#10;ChannelPi&#9;PSI&#9;JAVA://io.netty.channel.ChannelPipeline&#10;Pipeline&#9;PSI&#9;JAVA://org.apache.catalina.Pipeline&#10;ByteBuf&#9;PSI&#9;JAVA://io.netty.buffer.ByteBuf&#10;Channel&#9;PSI&#9;JAVA://io.netty.channel.Channel&#10;Admin&#9;FILE&#9;file://D:/E/base_exer/jade-identify/src/main/java/com/jade/controller/AdministorController.java&#10;userMa&#9;FILE&#9;file://D:/E/base_exer/jade-identify/src/resources/mybatis/mapper/UserMapper.xml" />
+    <property name="SearchEverywhereHistoryKey" value="find in path&#9;ACTION&#9;FindInPath&#10;waitForHelperThreads&#9;PSI&#9;JAVA://sun.nio.ch.WindowsSelectorImpl.FinishLock#waitForHelperThreads&#10;Admi&#9;PSI&#9;JAVA://com.jade.controller.AdministorController&#10;stan&#9;FILE&#9;file://D:/E/base_exer/jade-identify/src/main/resources/static/standard.html&#10;NIO&#9;FILE&#9;jar://C:/Users/wangwanjun/.m2/repository/io/netty/netty-transport/4.1.11.Final/netty-transport-4.1.11.Final.jar!/io/netty/channel/nio/NioEventLoop.class&#10;JarResourceMa&#9;PSI&#9;JAVA://org.springframework.boot.context.embedded.undertow.JarResourceManager&#10;Launcher&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner&#10;ResourceUt&#9;FILE&#9;jar://C:/Users/wangwanjun/.m2/repository/org/springframework/spring-core/4.3.13.RELEASE/spring-core-4.3.13.RELEASE-sources.jar!/org/springframework/util/ResourceUtils.java&#10;NioEvent&#9;PSI&#9;JAVA://io.netty.channel.nio.NioEventLoop&#10;EventLoop&#9;PSI&#9;JAVA://io.netty.channel.EventLoop&#10;IOUtils&#9;PSI&#9;JAVA://org.apache.commons.io.IOUtils&#10;ChannelFuture&#9;PSI&#9;JAVA://io.netty.channel.ChannelFuture&#10;ChannelPi&#9;PSI&#9;JAVA://io.netty.channel.ChannelPipeline&#10;Pipeline&#9;PSI&#9;JAVA://org.apache.catalina.Pipeline&#10;ByteBuf&#9;PSI&#9;JAVA://io.netty.buffer.ByteBuf&#10;Channel&#9;PSI&#9;JAVA://io.netty.channel.Channel&#10;Admin&#9;FILE&#9;file://D:/E/base_exer/jade-identify/src/main/java/com/jade/controller/AdministorController.java&#10;userMa&#9;FILE&#9;file://D:/E/base_exer/jade-identify/src/resources/mybatis/mapper/UserMapper.xml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -616,6 +579,9 @@
       <workItem from="1531823171152" duration="498000" />
       <workItem from="1532393821751" duration="35826000" />
       <workItem from="1532655648661" duration="9632000" />
+      <workItem from="1532685938278" duration="334000" />
+      <workItem from="1532915558454" duration="13042000" />
+      <workItem from="1533199065608" duration="4547000" />
     </task>
     <task id="LOCAL-00001" summary="init工程">
       <created>1530705781674</created>
@@ -687,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532426957865</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="新提交">
+      <created>1532685974569</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1532685974569</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -723,7 +696,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168337000" />
+    <option name="totallyTimeSpent" value="186260000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -746,22 +719,22 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" sideWeight="0.49757674" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3293348" />
       <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3293348" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3293348" />
       <window_info id="Designer" order="5" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15565032" />
-      <window_info anchor="right" id="Bean Validation" order="5" sideWeight="0.4984227" weight="0.32995737" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20202559" />
+      <window_info anchor="right" id="Bean Validation" order="5" sideWeight="0.49781182" weight="0.32995737" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Database" order="4" weight="0.32995737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3217012" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="right" id="Coverage" order="7" sideWeight="0.5024233" side_tool="true" weight="0.32995737" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3206934" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="7" sideWeight="0.5021882" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -912,11 +885,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -931,17 +899,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
           <caret line="113" selection-start-line="113" selection-end-line="113" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2117#2118#0" expanded="true" />
-            <element signature="e#2149#2150#0" expanded="true" />
-            <element signature="e#2184#2185#0" expanded="true" />
-            <element signature="e#2218#2219#0" expanded="true" />
-            <element signature="e#2247#2248#0" expanded="true" />
-            <element signature="e#2279#2280#0" expanded="true" />
-            <element signature="e#2314#2315#0" expanded="true" />
-            <element signature="e#2348#2349#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -949,10 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
-          <folding>
-            <element signature="e#2112#2113#0" expanded="true" />
-            <element signature="e#2149#2150#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -981,10 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4272">
           <caret line="307" column="15" selection-start-line="307" selection-start-column="15" selection-end-line="307" selection-end-column="15" />
-          <folding>
-            <element signature="e#12595#12596#0" expanded="true" />
-            <element signature="e#12634#12635#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -992,10 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="40" column="69" lean-forward="true" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
-          <folding>
-            <element signature="e#5042#5043#0" expanded="true" />
-            <element signature="e#5104#5105#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1042,9 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1052,9 +994,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="686">
           <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1076,16 +1015,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jade/fdfs/FastDFSClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1140,7 +1069,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jade/controller/JadeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
+        <state relative-caret-position="768">
           <caret line="67" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
@@ -1159,26 +1088,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/zhenping.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="417" column="26" selection-start-line="417" selection-start-column="26" selection-end-line="417" selection-end-column="26" />
+        <state relative-caret-position="768">
+          <caret line="48" column="33" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
           <folding>
-            <element signature="n#style#0;n#span#0;n#h1#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fastdfs-client.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1364">
-          <caret line="48" column="33" lean-forward="true" selection-start-line="48" selection-start-column="33" selection-end-line="48" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#p#2;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="112">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/D/jdk/jre/lib/rt.jar!/sun/nio/ch/WindowsSelectorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="323" column="43" selection-start-line="323" selection-start-column="43" selection-end-line="323" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/manager/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2064">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
         </state>
       </provider>
     </entry>
@@ -1192,10 +1136,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/zhenping.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4608">
+          <caret line="288" column="44" selection-start-line="288" selection-start-column="44" selection-end-line="288" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#h1#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jade/fdfs/FastDFSClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/standard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        <state relative-caret-position="3184">
+          <caret line="199" column="41" selection-start-line="199" selection-start-column="41" selection-end-line="199" selection-end-column="41" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1216,38 +1183,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/manager/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2064">
-          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1328">
-          <caret line="83" column="12" lean-forward="true" selection-start-line="83" selection-start-column="12" selection-end-line="83" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/main.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1072">
-          <caret line="178" column="46" lean-forward="true" selection-start-line="178" selection-start-column="46" selection-end-line="178" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fastdfs-client.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/D/jdk/jre/lib/rt.jar!/sun/nio/ch/WindowsSelectorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="329" column="21" lean-forward="true" selection-start-line="329" selection-start-column="21" selection-end-line="329" selection-end-column="21" />
+        <state relative-caret-position="334">
+          <caret line="102" column="27" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
         </state>
       </provider>
     </entry>
