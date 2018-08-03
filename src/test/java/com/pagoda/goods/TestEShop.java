@@ -124,7 +124,7 @@ public class TestEShop {
             if (filePath != null) {
                 uploadResult = (JSONArray) JSONArray.toJSON(filePath);
             }
-            String url = "140.143.159.112:8888/" + uploadResult.get(0) +  "/" + uploadResult.get(1);
+            String url = "43.97.219.222:8888/" + uploadResult.get(0) +  "/" + uploadResult.get(1);
             System.out.println(url);
 
             System.out.println(uploadResult);

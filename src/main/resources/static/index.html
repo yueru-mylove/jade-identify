@@ -8,11 +8,149 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>保利鉴定</title>
     <meta name="description" content="保利鉴定，适应人民群众日益增长的钱币收藏需求，为钱币爱好者保驾护航。"/>
-    <meta name="keywords" content="保利鉴定|古币鉴定|保利古钱币|古钱币鉴定"/>
+    <meta name="keywords" content="保利鉴定|古币鉴定|保利古玩|古玉鉴定"/>
     <link href="/templates/default/style/css.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="/templates/default/js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript" src="/templates/default/js/jquery.jslides.js"></script>
     <script type="text/javascript" src="/templates/default/js/direction.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .banner_box {
+            position: relative; /*attention*/
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .banner_images {
+            position: absolute; /*attention*/
+            left: 0;
+            width: 400%; /*attention please*/
+        }
+
+        .banner_img {
+            float: left;
+            width: 25%; /*attention please*/
+            height: 600px;
+        }
+
+        .banner_img img {
+            width: 100%;
+            height: 600px;
+        }
+
+        .switcher {
+            position: absolute;
+            top: 285px;
+            width: 100%;
+            display: none;
+        }
+
+        .switcher p {
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            background: rgba(0, 0, 0, .8);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .switcher .prev {
+            float: left;
+            margin-left: 50px
+        }
+
+        .switcher .next {
+            float: right;
+            margin-right: 50px;
+        }
+
+        .banner_box:hover .switcher {
+            display: block;
+        }
+
+        .points {
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            width: 400px;
+            margin-left: -200px;
+            overflow: hidden;
+        }
+
+        .points li {
+            width: 100px;
+            height: 5px;
+            background: rgba(0, 0, 0, .8);
+            float: left;
+            list-style: none;
+            cursor: Crosshair;
+        }
+
+        .points li.point_on {
+            background: #C92027;
+        }
+
+    </style>
+    <script>
+        $(function () {
+
+            var img = $('.banner_images div:eq(0)').clone()
+            $('.banner_images').append(img);
+            var img_length = $('.banner_img').length; //图片的张数
+            var width = $('.banner_img').width()
+            var i = 0;
+
+            function banner() { //轮播函数
+                i++;
+                if (i < 0) {
+                    i = img_length - 1;
+                    $('.banner_images').css({'left': (-i * width) + 'px'});
+                }
+                if (i > img_length - 1) {
+                    i = 1;
+                    $('.banner_images').css({'left': 0});
+                }
+                $('.banner_images').animate({'left': (-i * width) + 'px'});
+                $('.points li').eq(i % 4).addClass('point_on').siblings().removeClass();
+
+            }
+
+            var banner_timer = setInterval(banner, 3000);
+            $('.switcher p').hover(function () {	//鼠标移入左右切换箭头清除定时器使轮播停止
+                clearInterval(banner_timer);
+            }, function () {	//鼠标移出切换箭头还原定时器，这里为避免定时器重复 还将定时器赋值给上边定义的banner_timer变量
+                banner_timer = setInterval(banner, 3000);
+            });
+
+            $('.switcher p').click(function () {	//点击左右箭头使图片左右切换
+                if ($(this).attr('class') == 'prev') {
+                    i -= 2;
+                    banner();
+                } else {
+                    // i += 1;
+                    banner();
+                }
+            });
+            $('.points li').click(function () {	//点击相应的焦点跳转到对应图片
+                i = $(this).index();
+                banner();
+            });
+
+            $("button").click(function () {
+                var result = $("#msform").submit;
+                alert(result);
+            })
+        })
+    </script>
 </head>
 
 <body class="index">
@@ -23,36 +161,45 @@
         <div class="logo fl"><a href="/"><img src="/templates/default/images/logo1.png"></a></div>
         <div class="menu fr">
             <ul>
-                <li class="on"><a href="/"><span>网站首页</span><label>HOME</label></a></li>
-                <li><a href="/about/"><span>公司简介</span><label>ABOUT</label></a></li>
-                <li><a href="/biaozhun"><span>收费标准</span><label>SOLUTIONS</label></a></li>
-                <li><a href="/standard"><span>评级标准</span><label>SOLUTIONS</label></a></li>
-                <li><a href="/jade/search"><span>评级鉴定</span><label>COINS</label></a></li>
-                <li><a href="/culture/"><span>企业文化</span><label>CULTURE</label></a></li>
-                <li><a href="/contact/"><span>联系我们</span><label>CONTACT</label></a></li>
+                <li class="on"><a href="/"><span>网站首页</span></a></li>
+                <li><a href="/about/"><span>公司简介</span></a></li>
+                <li><a href="/biaozhun"><span>收费标准</span></a></li>
+                <li><a href="/standard"><span>评级标准</span></a></li>
+                <li><a href="/jade/search"><span>评级鉴定</span></a></li>
+                <li><a href="/culture/"><span>企业文化</span></a></li>
+                <li><a href="/contact/"><span>联系我们</span></a></li>
             </ul>
         </div>
     </div>
 </div>
-
 <div class="mainer">
     <div class="about_banner">
-        <div class="about_banCen">
-            <div class="about_banTitle">保利鉴定</div>
-            <div class="about_banCon">
-                <p></p>
-                <p><br></p>
-                <p style="text-align: center">为古玩爱好者保驾护航，让每一个古玩爱好者放心收藏！</p>
-                <p><br></p>
+        <div class="banner_box">
+            <div class="banner_images">
+                <div class="banner_img">
+                    <a href=""><img src="/templates/default/images/banner0.jpg" alt="bannerOne"></a>
+                </div>
+                <div class="banner_img">
+                    <a href=""><img src="/templates/default/images/banner1.jpg" alt="bannerTwo"></a>
+                </div>
+                <div class="banner_img">
+                    <a href=""><img src="/templates/default/images/banner2.jpg" alt="bannerThree"></a>
+                </div>
+                <div class="banner_img">
+                    <a href=""><img src="/templates/default/images/banner3.jpg" alt="bannerFour"></a>
+                </div>
             </div>
-        </div>
-        <div class="clear"></div>
-        <div class="index_service">
-            <div class="index_service_t"><h2>古币鉴定</h2>适应人民群众日益增长的钱币收藏需求，为钱币爱好者保驾护航！</div>
-            <form action="#" method="post">
-                <input type="text" name="code" value="" placeholder="请输入产品包装上的编号"/>
-                <input type="submit" name="submit" value="查询"/>
-            </form>
+            <div class="switcher">
+                <p class="prev">←</p>
+                <p class="next">→</p>
+            </div>
+
+            <ul class="points">
+                <li class="point_on"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
         <div class="clear"></div>
         <div class="new">
@@ -76,16 +223,17 @@
                                 </span>
                             </a>
                         </li>
-                        <li><a title="岫岩玉器市场" href="/article/5.html">
-                            <span class="blog_Rtime fl">
-                                <b>28</b>
-                                <em>2017-11</em>
-                            </span>
-                            <span class="blog_Rmore fr">
-                                <b>岫岩玉器市场</b>
-                                <span>新中国成立后，特别是改革开放以来，驰名世界、资源丰富的辽宁省岫岩县岫玉的开发，备受关注和重视，其规模、质量和影响，都达到了空前的程度。目前，在岫玉产地，已形成全</span>
-                            </span>
-                        </a>
+                        <li>
+                            <a title="岫岩玉器市场" href="/article/5.html">
+                                <span class="blog_Rtime fl">
+                                    <b>28</b>
+                                    <em>2017-11</em>
+                                </span>
+                                <span class="blog_Rmore fr">
+                                    <b>岫岩玉器市场</b>
+                                    <span>新中国成立后，特别是改革开放以来，驰名世界、资源丰富的辽宁省岫岩县岫玉的开发，备受关注和重视，其规模、质量和影响，都达到了空前的程度。目前，在岫玉产地，已形成全</span>
+                                </span>
+                            </a>
                         </li>
                         <li>
                             <a title="平洲玉器街" href="/article/4.html">
@@ -133,9 +281,132 @@
                                 </span>
                             </a>
                         </li>
+                        <li>
+                            <a title="镇平玉雕湾" href="/article/1.html">
+                                <span class="blog_Rtime fl">
+                                    <b>28</b>
+                                    <em>2017-11</em>
+                                </span>
+                                <span class="blog_Rmore fr">
+                                    <b>镇平玉雕湾</b>
+                                    <span>河南南阳镇平县城西北八公里处，有一个自古就有“玉雕之乡” 美誉的玉雕产销集散地--石佛寺，在这里，以中华玉文化中心为标志的玉雕湾综合市场，与贺庄摆件市场、榆树庄玉镯市</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="镇平玉雕湾" href="/article/1.html">
+                                <span class="blog_Rtime fl">
+                                    <b>28</b>
+                                    <em>2017-11</em>
+                                </span>
+                                <span class="blog_Rmore fr">
+                                    <b>镇平玉雕湾</b>
+                                    <span>河南南阳镇平县城西北八公里处，有一个自古就有“玉雕之乡” 美誉的玉雕产销集散地--石佛寺，在这里，以中华玉文化中心为标志的玉雕湾综合市场，与贺庄摆件市场、榆树庄玉镯市</span>
+                                </span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="clear"></div>
+            </div>
+            <div class="blog_list">
+                <ul>
+                    <li>
+                        <a title="南阳玉雕大世界" href="/article/nanyang.html">
+                                <span class="blog_Rtime fl">
+                                    <b>28</b>
+                                    <em>2017-11</em>
+                                </span>
+                            <span class="blog_Rmore fr">
+                                    <b>南阳玉雕大世界</b>
+                                    <span>南阳玉雕大世界建在南阳卧龙路原南阳市烙画厂院内，占地25亩，总建筑面积27300平方米，其中商业用房200套，经营玉雕、烙画、根雕、陶瓷等工艺品，是南阳城区最大的玉雕，
+                                    </span>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="岫岩玉器市场" href="/article/5.html">
+                                <span class="blog_Rtime fl">
+                                    <b>28</b>
+                                    <em>2017-11</em>
+                                </span>
+                            <span class="blog_Rmore fr">
+                                    <b>岫岩玉器市场</b>
+                                    <span>新中国成立后，特别是改革开放以来，驰名世界、资源丰富的辽宁省岫岩县岫玉的开发，备受关注和重视，其规模、质量和影响，都达到了空前的程度。目前，在岫玉产地，已形成全</span>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="平洲玉器街" href="/article/4.html">
+                                <span class="blog_Rtime fl">
+                                    <b>28</b>
+                                    <em>2017-11</em>
+                                </span>
+                            <span class="blog_Rmore fr">
+                                    <b>平洲玉器街</b>
+                                    <span>佛山市南海区桂城街道平洲位于南海区东部，毗邻港澳，地处广州、佛山、南海、顺德、番禺五市交汇地带，地理位置得天独厚，水陆交通十分方便，有直航香港客货港口，邻近三山</span>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="阳美玉都" href="/article/3.html">
+                                <span class="blog_Rtime fl">
+                                    <b>28</b>
+                                    <em>2017-11</em>
+                                </span>
+                            <span class="blog_Rmore fr">
+                                <b>阳美玉都</b>
+                                <span>位于广东省揭阳市区西部的阳美村，自1905年起，村民就从事玉器加工生产贸易，迄今已有近百年的历史。到目前为止，全村共有大小玉器加工及贸易四百多家，相当于全村总户数</span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="四会玉器街 " href="/article/2.html">
+                                <span class="blog_Rtime fl">
+                                    <b>28</b>
+                                    <em>2017-11</em>
+                                </span><span class="blog_Rmore fr">
+                                <b>四会玉器街 </b>
+                                <span>四会玉器街位于广东省肇庆市所属县级市四会市，距广州67公里。周边村屯分散着几千户以家庭为单位的玉器小作坊，在四会市内形成玉器街、玉器城、天光市场三个玉器销售板</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="镇平玉雕湾" href="/article/1.html">
+                                <span class="blog_Rtime fl">
+                                    <b>28</b>
+                                    <em>2017-11</em>
+                                </span>
+                            <span class="blog_Rmore fr">
+                                    <b>镇平玉雕湾</b>
+                                    <span>河南南阳镇平县城西北八公里处，有一个自古就有“玉雕之乡” 美誉的玉雕产销集散地--石佛寺，在这里，以中华玉文化中心为标志的玉雕湾综合市场，与贺庄摆件市场、榆树庄玉镯市</span>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="镇平玉雕湾" href="/article/1.html">
+                                <span class="blog_Rtime fl">
+                                    <b>28</b>
+                                    <em>2017-11</em>
+                                </span>
+                            <span class="blog_Rmore fr">
+                                    <b>镇平玉雕湾</b>
+                                    <span>河南南阳镇平县城西北八公里处，有一个自古就有“玉雕之乡” 美誉的玉雕产销集散地--石佛寺，在这里，以中华玉文化中心为标志的玉雕湾综合市场，与贺庄摆件市场、榆树庄玉镯市</span>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="镇平玉雕湾" href="/article/1.html">
+                                <span class="blog_Rtime fl">
+                                    <b>28</b>
+                                    <em>2017-11</em>
+                                </span>
+                            <span class="blog_Rmore fr">
+                                    <b>镇平玉雕湾</b>
+                                    <span>河南南阳镇平县城西北八公里处，有一个自古就有“玉雕之乡” 美誉的玉雕产销集散地--石佛寺，在这里，以中华玉文化中心为标志的玉雕湾综合市场，与贺庄摆件市场、榆树庄玉镯市</span>
+                                </span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
