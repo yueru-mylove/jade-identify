@@ -51,8 +51,8 @@ td, th {
     position: fixed
 }
 
-.w1200 {
-    width: 1200px;
+.w1800 {
+    width: 1239px;
     margin: 0 auto;
 }
 
@@ -234,8 +234,7 @@ body {
 /*底部通用*/
 
 .deanftbottom {
-    height: 66px;
-    padding: 20px 0 0px 0;
+    padding: 0px;
     background: #202020;
     width: 100%;
     min-width: 1180px;
@@ -523,7 +522,7 @@ div.jogger span.disabled {
 }
 
 .i_contact_ul ul {
-    width: 1220px;
+    width: 1820px;
     margin: 0 auto
 }
 
@@ -908,6 +907,8 @@ div.jogger span.disabled {
 }
 
 .blog_list {
+    margin: 0 auto;
+    padding: 0 103px;
     width: 100%;
 }
 
@@ -1174,7 +1175,6 @@ div.jogger span.disabled {
 
 .about_banner {
     height: 500px;
-    background: url(../images/middle_banner.jpg) center top no-repeat;
 }
 
 .about_banCen {
@@ -1635,3 +1635,154 @@ div.jogger span.disabled {
 .jieguo img {
     width: 100%
 }
+
+.footer {
+    position: relative;
+    top: 0;
+    left: auto;
+    width: 950px;
+    height: auto;
+    margin: auto;
+    border: none;
+    padding: 30px 0 30px 0;
+    background: none;
+    overflow: hidden;
+    color: #666;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    line-height: normal;
+    text-align: center;
+}
+
+.footer-col {
+    margin-top: 30px;
+    background-color: #36363d;
+    border-top: 5px solid #00a3cf;
+    clear: both;
+    padding: 25px 0;
+    color: #aaa;
+}
+
+.footer-col :before {
+
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    zoom: 1;
+}
+.container {
+    max-width: 1360px;
+    padding: 0 10px;
+}
+
+.footer-col .block {
+    width: 30%;
+    padding: 0 10px;
+}
+
+#logo, #pull-menu .menu li, .footer-col .block, .node .blog-author .media-object, .node-header .submitted, .course-list li .course-list-img, .course-list li .tips .l, .page-friend .view-friend .item-list ul li, .page-project .view-project .item-list ul li, .view-members .views-row .views-field-field-team-pic, .node .field-name-field--l-tu, .node .field-collection-container .field-name-field-coll-thumb, .view--kan .views-row .views-field-field--l-tu {
+    float: left;
+    _display: inline;
+}
+
+.footer-col .media-object {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    position: relative;
+    text-indent: -999px;
+    overflow: hidden;
+    background: url(../images/logo_footer.png) no-repeat center;
+    border-radius: 75px;
+    -webkit-background-size: 150px auto;
+    background-size: 150px auto;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.container:after {
+    clear: both;
+}
+
+.container:after, .container:before {
+    content: "";
+    display: table;
+}
+
+.container:after, #pull-menu .menu:after, .footer-col .block .content:after, .node .blog-author:after, .node-header:after, .course-list li:after, .course-list li .tips:after, .page-friend .view-friend .item-list ul:after, .page-project .view-project .item-list ul:after, .view-members .views-row:after, .node .field-collection-container .field-collection-view:after, .view--kan .views-row:after {
+    clear: both;
+    overflow: hidden;
+}
+
+.footer-col .block h2 {
+    font-size: 16px;
+    margin: 0 0 15px;
+    padding: 0 0 25px 0;
+    color: #aaa;
+    background: url(/templates/default/images/stripes.png) repeat-x bottom left;
+}
+
+div#navsecond {
+    float: left;
+    margin: 0 0 0 6px;
+    padding: 0;
+    border: 2px;
+    width: 180px;
+    background: transparent;
+    margin-left: 12px;
+    text-align: left;
+    text-decoration: none;
+}
+
+div#course {
+    padding: 66px 0 10px 0;
+}
+
+div#navsecond ul {
+    display: block;
+}
+
+div#navsecond li, div#sidebar li {
+    list-style: none;
+}
+
+div#navsecond ul, div#navsecond li, div#sidebar ul, div#sidebar li {
+    margin: 0;
+    padding: 5px 0;
+    font-family: '微软雅黑';
+    border-color: red;
+}
+
+div#navsecond li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+div#navsecond a:link, div#navsecond a:visited {
+    text-decoration: none;
+    color: #000000;
+    background: transparent;
+}
+
+div#navsecond a, div#sidebar a {
+    display: block;
+    padding: 5px 0 5px 15px;
+    font-size: 12px;
+    border-bottom: 0px solid #ddd;
+    text-decoration: none;
+}
+
+div#course > h2{
+    background-color: lightgray;
+}
+
+div#course li:hover {
+    background-color: dimgray;
+}
+
