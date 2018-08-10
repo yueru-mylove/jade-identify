@@ -1,0 +1,278 @@
+#main_std {
+    width: 1200px;
+    margin: 25px auto;
+    padding-bottom: 20px;
+    line-height: 25px;
+}
+
+#main-l {
+    width: 270px;
+    float: left;
+    background-color: #fff;
+}
+
+#main_std {
+    color: #555;
+    font-size: 14px;
+    font-family: '微软雅黑','宋体', "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif, 'Tahoma';
+    margin: 0 auto;
+    padding: 0;
+    line-height: 25px;
+}
+
+#mla {
+    width: 270px;
+    height: 100px;
+    background: #830008;
+    color: white;
+}
+
+#mla p:first-child {
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 25px;
+}
+
+#mla p {
+    margin-left: 35px;
+}
+
+#mla p {
+    line-height: 25px;
+}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+#mla {
+    width: 270px;
+    height: 100px;
+    background: #830008;
+    color: white;
+}
+#mla p:last-child {
+    font-size: 16px;
+    padding-top: 10px;
+    margin-bottom: 25px;
+}
+
+#mclc {
+    width: 270px;
+    margin: 0 auto;
+    padding-top: 2px;
+    background-color: #F6F6F6;
+    margin-bottom: 25px;
+}
+
+#mclc ul {
+    margin: 0;
+    padding: 0;
+}
+
+#mclc ul, li {
+    list-style: none;
+    text-transform: capitalize;
+}
+
+
+#mclc ul li {
+    list-style: none;
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 52px;
+    overflow: hidden;
+    padding-left: 20px;
+    border-bottom: white 1px solid;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 0px 0px #d0d0d0;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+#mclc ul a {
+    display: block;
+    float: left;
+}
+
+a {
+    color: #555;
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+}
+
+#mclc ul img {
+    display: block;
+    float: right;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+img {
+    border: none;
+}
+
+#cct {
+    width: 270px;
+    height: 102px;
+    background: url(../images/contact.png) no-repeat;
+    line-height: 42px;
+    font-size: 16px;
+    color: 830009;
+    font-weight: bold;
+}
+
+#cct #ctl {
+    margin-left: 30px;
+    line-height: 75px;
+    font-size: 18px;
+}
+
+#main-r {
+    width: 894px;
+    float: right;
+    background-color: #fff;
+}
+
+#mra {
+    width: 894px;
+    height: 35px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    line-height: 35px;
+}
+
+#mral {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#mrar {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #989898;
+    background-image: url(../images/hom1.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+#main-r img {
+    max-width: 894px;
+}
+
+#criteria {
+    width: 894px;
+    font-size: 16px;
+    margin: 0 auto;
+    line-height: 28px;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+#criteria table {
+    font-size: 14px;
+    color: #000000;
+    width: 894px;
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    text-align: start;
+    font-variant: normal;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+#criteria table tr {
+    height: 30px;
+    border: 1px solid #B39A4D;
+}
+
+user agent stylesheet
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+#criteria table td:first-child {
+    width: 85px;
+    text-align: center;
+}
+#criteria table td {
+    border: 1px solid #B39A4D;
+}
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+a:hover {
+    color: #a2041b;
+    text-decoration: none;
+}
+
+#mclc ul li:hover {
+    border-bottom: #b89a60 1px solid;
+    background: #b89a60;
+    color: #fff;
+    box-shadow: 0 0 0 #d0d0d0;
+}
