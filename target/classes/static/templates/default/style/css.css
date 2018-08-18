@@ -354,8 +354,10 @@ div.jogger span.disabled {
     height: 360px;
     padding: 40px 0;
     text-align: center;
-    background: url(../images/solutions_bg.jpg) center center no-repeat;
+    background-color: #e2e6ea;
+    background-color: white;
     min-width: 1200px;
+    background-size: 100% 100%;
 }
 
 .index_service_t {

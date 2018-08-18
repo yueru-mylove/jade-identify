@@ -1,0 +1,386 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>保利&珍品</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/templates/default/style/css.css">
+    <link rel="stylesheet" href="/templates/default/style/std.css"/>
+    <script src="/templates/default/js/std.js"></script>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .banner_box {
+            position: relative; /*attention*/
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+        }
+
+        .banner_images {
+            position: absolute; /*attention*/
+            left: 0;
+            width: 500%; /*attention please*/
+        }
+
+        .banner_img {
+            float: left;
+            width: 20%; /*attention please*/
+            height: 600px;
+        }
+
+        .banner_img img {
+            width: 100%;
+            height: 600px;
+        }
+
+        .switcher {
+            position: absolute;
+            top: 285px;
+            width: 100%;
+            display: none;
+        }
+
+        .switcher p {
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            background: rgba(0, 0, 0, .8);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .switcher .prev {
+            float: left;
+            margin-left: 50px
+        }
+
+        .switcher .next {
+            float: right;
+            margin-right: 50px;
+        }
+
+        .banner_box:hover .switcher {
+            display: block;
+        }
+
+        .points {
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            width: 400px;
+            margin-left: -200px;
+            overflow: hidden;
+        }
+
+        .points li {
+            width: 100px;
+            height: 5px;
+            background: rgba(0, 0, 0, .8);
+            float: left;
+            list-style: none;
+            cursor: Crosshair;
+        }
+
+        .points li.point_on {
+            background: #C92027;
+        }
+
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="top">
+    <div class="wrap">
+        <nav></nav>
+        <div class="logo fl"><a href="/"><img src="/templates/default/images/logo1.png"></a></div>
+        <div class="menu fr">
+            <ul>
+                <li class="on"><a href="/"><span>网站首页</span></a></li>
+                <li><a href="/culture.html/"><span>公司简介</span></a></li>
+                <li><a href="/culture.html/"><span>企业文化</span></a></li>
+                <li><a href="/news.html/"><span>新闻中心</span></a></li>
+                <li><a href="/standard.html"><span>收费标准</span></a></li>
+                <li><a href="/jade/search"><span>古币鉴定</span></a></li>
+                <li><a href="/#"><span>联系我们</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="mainer">
+    <div class="banner_box">
+        <div class="banner_images">
+            <div class="banner_img"><a href="#"><img src="/templates/default/images/1.jpg" alt="bannerOne"></a></div>
+            <div class="banner_img"><a href="#"><img src="/templates/default/images/2.jpg" alt="bannerTwo"></a></div>
+            <div class="banner_img"><a href="#"><img src="/templates/default/images/3.jpg" alt="bannerThree"></a></div>
+            <div class="banner_img"><a href="#"><img src="/templates/default/images/4.jpg" alt="bannerFour"></a></div>
+        </div>
+
+        <div class="switcher">
+            <p class="prev">←</p>
+            <p class="next">→</p>
+        </div>
+
+        <ul class="points">
+            <li class="point_on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+<div id="main_std">
+    <div id="main-l">
+        <div id="mla">
+            <p>评级标准</p>
+            <p>RATING CRITERIA</p>
+        </div>
+        <div id="mclc">
+            <ul>
+                <li class="std_li coins">
+                    <span href="#" class="hv2">古币评级标准</span>
+                    <img src="/templates/default/images/zuojiantou.png" alt="">
+                </li>
+                <li class="std_li silver">
+                    <span href="#" class="hv2">银币评级标准</span>
+                    <img src="/templates/default/images/zuojiantou.png" alt="">
+                </li>
+
+                <li class="std_li banknotes">
+                    <span href="#" class="hv2">纸币评级标准</span>
+                    <img src="/templates/default/images/zuojiantou.png" alt="">
+                </li>
+                <li class="std_li stamp">
+                    <span href="#" class="hv2">邮票评级查询</span>
+                    <img src="/templates/default/images/zuojiantou.png" alt="">
+                </li>
+            </ul>
+        </div>
+
+        <div id="cct">
+            <a href="contact.php?cid=4">
+                <div id="ctl">联系我们</div>
+                <div id="ctr"></div>
+            </a>
+        </div>
+        <div id="mmcrarc" style="padding: 20px;background: #FCFCFC">
+            客服热线：13888888888 &nbsp;<br>QQ：85506450。<br>新客户请加qq<br>
+        </div>
+    </div>
+    <div id="main-r">
+        <div id="mra">
+            <div id="mral">古币评级标准</div>
+            <div id="mrar">您的位置：<a href="">首页</a>&nbsp;&gt;&nbsp;<a href="pingjibiaozhun.php?cid=13">评级标准</a>&nbsp;&gt;&nbsp;<a
+                    href="pingjibiaozhun.php?cid=14">古币评级标准</a></div>
+        </div>
+        <div class="hengxian-3">
+            <img src="/templates/default/images/hengxian-3.png" alt="">
+        </div>
+        <div id="mrb">
+            <p class="MsoNormal">
+                <span style="font-family:宋体;color:#000000;"> </span>
+            </p>
+            <p class="MsoNormal" align="justify" style="margin-left:0.0000pt;text-indent:21.0000pt;text-align:justify;">
+                <span style="font-size:14px;">保利钱币评级公司是</span><span style="font-size:14px;">2015</span><span
+                    style="font-size:14px;">年年初注册成立</span><span style="font-size:14px;">,</span><span
+                    style="font-size:14px;">以钱币评级</span><span style="font-size:14px;">,</span><span
+                    style="font-size:14px;">封装为一体的钱币评级公司。</span>
+            </p>
+            <p class="MsoNormal" align="justify" style="margin-left:0.0000pt;text-indent:21.0000pt;text-align:justify;">
+                <br>
+            </p>
+            <p class="MsoNormal" align="justify" style="margin-left:0.0000pt;text-indent:21.0000pt;text-align:justify;">
+                <span style="font-size:14px;">本公司总部设在交通便利，玉文化底蕴身后的玉都新疆。</span> <span style="font-size:14px;">公司营业以来累计收评各类钱币，古玩，邮票等数万枚。</span><span
+                    style="font-size:14px;">本公司自成立以来随着知名度认可度不断上升，每个月的钱币收评量都成梯度式增长。我们评级封装的钱币在各大拍卖网站上都可以随时看到，并且价值都得到了良好地体现。</span>
+            </p>
+            <p class="MsoNormal" align="justify" style="margin-left:0.0000pt;text-indent:21.0000pt;text-align:justify;">
+                <br>
+            </p>
+            <p class="MsoNormal" align="justify" style="margin-left:0.0000pt;text-indent:21.0000pt;text-align:justify;">
+                <span style="font-size:14px;">为了满足不同客户的审美要求，我们做到了评级盒样式最多、标签最丰富的评级公司</span> <span
+                    style="font-size:14px;">为了提高品牌影响力和产品竞争力我们今年设计推出了全新的纪念币评级盒。采用国外进口原料，此材料透明度更高。更耐磨韧性更好，可以更好地避免纪念币氧化。并且纪念币标签会更多样化呈现在收藏爱好者面前。</span>
+            </p>
+            <p class="MsoNormal" align="justify" style="margin-left:0.0000pt;text-indent:21.0000pt;text-align:justify;">
+                <br>
+            </p>
+            <p class="MsoNormal" align="justify" style="margin-left:0.0000pt;text-indent:21.0000pt;text-align:justify;">
+                <span style="font-size:14px;">本公司自成立以来为很多收藏爱好者提供了有效的真伪辨别服务，得到了广大收藏爱好者的认可和支持。</span> <span
+                    style="font-size:14px;">本公司聘请多位来自新疆和田，石佛寺，广东四会等多个名镇的能工巧匠暨古币大家，并且同一枚钱币会有三位评级师参与审核和鉴定</span><span
+                    style="font-size:14px;">,</span><span style="font-size:14px;">确保了钱币鉴定结果的准确性和公平性。</span>
+            </p>
+            <p class="MsoNormal" align="justify" style="margin-left:0.0000pt;text-indent:21.0000pt;text-align:justify;">
+                <br>
+            </p>
+            <p class="MsoNormal" align="justify" style="margin-left:0.0000pt;text-indent:21.0000pt;text-align:justify;">
+                <span style="font-size:14px;">我们立志成为北方钱币评级公司的知名品牌。在这漫长的评级道路中我们希望更多的收藏爱好者可以关注我们</span><span
+                    style="font-size:14px;">,</span><span style="font-size:14px;">批评我们。新疆保利评级期待与您的合作。</span>
+            </p>
+            <p>
+                <br>
+            </p>
+            <p class="MsoNormal">
+                <span style="font-family:宋体;color:#000000;"></span><span style="color:#000000;"></span><span
+                    style="font-family:宋体;color:#000000;"></span>
+                <o:p></o:p>
+            </p>
+            <p class="dayin">
+                <a href="javascript:window.print();">【打印】</a>
+            </p>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div id="footer-col" class="footer-col">
+    <div class="container">
+        <div class="region region-footer-col">
+            <div id="block-block-39" class="block block-block">
+                <h2>关于我们</h2>
+                <div class="content">
+                    <a class="media-object" href="http://www.w3cplus.com">W3cplus</a>
+                    <div class="media-body">
+                        <p>
+                            W3cplus是一个致力于推广国内前端行业的技术博客。它以探索为己任，不断活跃在行业技术最前沿，努力提供高质量前端技术博文；其文章范围广泛，主要以CSS3、HTML5、JavaScript、Vue、React、Mobile、动画等教程、译文和案例为主。
+                        </p>
+                        <p><a href="//www.w3cplus.com/sites/default/files/blogs/2017/1711/W3cplus-banner.pdf"
+                              target="_blank">W3cplus提供相关广告展示与招聘发布</a>，有需要的请联系：微信号w3cplus，E-mail:
+                            <a href="mailto:airenliao@gmail.com" target="_blank">airenliao@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="block-block-40" class="block block-block">
+                <h2>关于站长</h2>
+                <div class="content">
+                    <p><a class="media-object" href="//www.w3cplus.com" target="_blank">大漠</a></p>
+                    <div class="media-body">
+                        <p>常用昵称“大漠”，<a href="//www.w3cplus.com" target="_blank">W3CPlus</a>创始人，目前就职于淘宝。对HTML5、CSS3和CSS处理器等前端脚本语言有非常深入的认识和丰富的实践经验，尤其专注对CSS3和动画的研究，是国内最早研究和使用CSS3和CSS处理器技术的一批人。现在主要在探讨学习JavaScript、React和Vue相关技术知识。CSS3、CSS处理器和Drupal中国布道者。2014年出版《<a
+                                href="//www.w3cplus.com/book-comment.html">图解CSS3：核心技术与案例实战</a>》。</p>
+                        <div class="social">
+                            <a class="github" href="//github.com/airen" target="_blank" title="github">github</a>
+                            <a class="weibo" href="//weibo.com/w3cplus" target="_blank" title="weibo">weibo</a>
+                            <a class="facebook" href="//www.facebook.com/w3cplus" target="_blank" title="facebook">facebook</a>
+                            <a class="google" href="//plus.google.com/+AirenLiao" target="_blank"
+                               title="google">google</a>
+                            <a class="twitter" href="//twitter.com/w3cplus" target="_blank" title="twitter">twitter</a>
+                            <a class="linkedin" href="//cn.linkedin.com/in/w3cplus" target="_blank" title="linkedin">linkedin</a>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+            <div id="block-block-41" class="block block-block">
+                <h2>我的作品</h2>
+                <div class="content">
+                    <a class="media-object" href="//www.w3cplus.com/book-comment.html" target="_blank">图解CSS3</a>
+                    <div class="media-body">
+                        <p>
+                            本书是国内著名的Web前端专家历时2载的心血之作，根据最新的CSS3撰写，融入了作者在CSS领域多年的使用经验，旨在将本书打造成为CSS3领域最权威和实用的专业著作，供没有经验的读者系统学习，供有经验的读者参考备查。</p>
+                        <p>本书理论知识系统全面，详细讲解了选择器、伸缩布局盒模型、渐变、过渡、动画等主题下涵盖的所有CSS3新特性。</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="deanftbottom">
+    <div class="footer">
+        Copyright ©2018 保利&amp;珍品
+    </div>
+</div>
+
+<script>
+    $(function () {
+
+        var img = $('.banner_images div:eq(0)').clone()
+        $('.banner_images').append(img);
+        var img_length = $('.banner_img').length; //图片的张数
+        var width = $('.banner_img').width()
+        var i = 0;
+
+        function banner() { //轮播函数
+            i++;
+            if (i < 0) {
+                i = img_length - 1;
+                $('.banner_images').css({'left': (-i * width) + 'px'});
+            }
+            if (i > img_length - 1) {
+                i = 1;
+                $('.banner_images').css({'left': 0});
+            }
+            $('.banner_images').animate({'left': (-i * width) + 'px'});
+            $('.points li').eq(i % 4).addClass('point_on').siblings().removeClass();
+
+        }
+
+        var banner_timer = setInterval(banner, 3000);
+
+        $('.switcher p').hover(function () {	//鼠标移入左右切换箭头清除定时器使轮播停止
+            clearInterval(banner_timer);
+        }, function () {	//鼠标移出切换箭头还原定时器，这里为避免定时器重复 还将定时器赋值给上边定义的banner_timer变量
+            banner_timer = setInterval(banner, 3000);
+        });
+
+        $('.switcher p').click(function () {	//点击左右箭头使图片左右切换
+            if ($(this).attr('class') == 'prev') {
+                i -= 2;
+                banner();
+            } else {
+                // i += 1;
+                banner();
+            }
+        });
+
+        $('.points li').click(function () {	//点击相应的焦点跳转到对应图片
+            i = $(this).index();
+            banner();
+        });
+
+        $("button").click(function () {
+            var result = $("#msform").submit;
+            alert(result);
+        });
+
+        $(".std_li").click(function () {
+            $(".std_li").removeClass("std_active");
+            $(this).addClass("std_active");
+            var url = "";
+            if ($(this).hasClass("coins")) {
+                url = "/coins.html"
+            } else if ($(this).hasClass("silver")) {
+                url = "/silver.html";
+            } else if ($(this).hasClass("banknotes")) {
+                url = "/banknotes.html";
+            } else if ($(this).hasClass("stamp")) {
+                url = "/stamp.html";
+            } else {
+                url = "coins.html";
+            }
+
+            $.ajax({
+                url: url,
+                type: "GET",
+                success: function (data) {
+                    $("#main-r").empty();
+                    $("#main-r").html(data);
+                }
+            })
+        });
+    })
+</script>
+</body>
+</html>
