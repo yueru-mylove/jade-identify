@@ -25,7 +25,7 @@ public class JadeController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JadeController.class);
 
-    private static final String FDFS_SERVER = "43.97.219.222";
+    private static final String FDFS_SERVER = "47.93.219.222";
 
     private static final Integer PORT = 8888;
 

@@ -15,21 +15,23 @@
 </head>
 <body>
 <div class="top">
-    <nav class="navbar">
-        <div class="logo fl"><a href="/"><img src="/templates/default/images/logo1.png"></a></div>
-        <div class="menu fr">
-            <ul>
-                <li class="on"><a href="/"><span>网站首页</span><em></em><label>HOME</label></a></li>
-                <li><a href="/about/"><span>公司简介</span><em></em><label>ABOUT</label></a></li>
-                <li><a href="/culture/"><span>企业文化</span><em></em><label>CULTURE</label></a></li>
-                <li><a href="/article/"><span>新闻中心</span><em></em><label>NEWS</label></a></li>
-                <li><a href="/biaozhun"><span>收费标准</span><em></em><label>SOLUTIONS</label></a></li>
-                <li><a href="/jianding"><span>古币鉴定</span><em></em><label>COINS</label></a></li>
-                <li><a href="/message/"><span>在线反馈</span><em></em><label>MESSAGE</label></a></li>
-                <li><a href="/contact/"><span>联系我们</span><em></em><label>CONTACT</label></a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="wrap">
+        <nav class="navbar">
+            <div class="logo fl"><a href="/"><img src="/templates/default/images/logo1.png"></a></div>
+            <div class="menu fr">
+                <ul>
+                    <li class="on"><a href="/"><span>网站首页</span></a></li>
+                    <li><a href="/about/"><span>公司简介</span></a></li>
+                    <li><a href="/culture/"><span>企业文化</span></a></li>
+                    <li><a href="/article/"><span>新闻中心</span></a></li>
+                    <li><a href="/biaozhun"><span>收费标准</span></a></li>
+                    <li><a href="/jianding"><span>古币鉴定</span></a></li>
+                    <li><a href="/message/"><span>在线反馈</span></a></li>
+                    <li><a href="/contact/"><span>联系我们</span></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 </div>
 <div class="mainer">
     <div class="clear"></div>

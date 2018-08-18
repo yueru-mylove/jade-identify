@@ -17,6 +17,7 @@
     font-family: '微软雅黑','宋体', "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif, 'Tahoma';
     margin: 0 auto;
     padding: 0;
+    padding-top: 20px;
     line-height: 25px;
 }
 
@@ -88,7 +89,7 @@ p {
 #mclc ul li {
     list-style: none;
     display: block;
-    width: 250px;
+    width: 270px;
     height: 50px;
     line-height: 52px;
     overflow: hidden;
@@ -275,4 +276,8 @@ a:hover {
     background: #b89a60;
     color: #fff;
     box-shadow: 0 0 0 #d0d0d0;
+}
+
+.std_active {
+    background-color: #b89a60;
 }

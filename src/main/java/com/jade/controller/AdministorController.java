@@ -26,7 +26,7 @@ public class AdministorController {
         return null;
     }
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String test() {
         System.out.println("test");
         return "login";
