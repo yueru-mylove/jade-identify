@@ -1,3 +1,5 @@
+<#ftl strip_whitespace=true>
+<#import "/spring.ftl" as spring />
 <!doctype html>
 <html>
 <head>
@@ -9,9 +11,6 @@
     <script type="text/javascript" src="/templates/default/js/jquery-1.8.0.min.js"></script>
     <script type="text/javascript" src="/templates/default/js/jquery.jslides.js"></script>
     <script type="text/javascript" src="/templates/default/js/yz.js"></script>
-<#--    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
-    <script type="text/javascript" src="/js/bootstrap.min.js">-->
 </head>
 <body>
 <div class="top">
@@ -35,16 +34,48 @@
 <div class="mainer">
     <div class="clear"></div>
     <div class="index_service">
-        <div class="index_service_t">
-            <h2>保利鉴定</h2>
-        </div>
-        <form id="search_form" action="#" method="post">
-            <input type="hidden" name="mid" value="1"/>
-            <input type="hidden" name="dopost" value="search"/>
-            <input id="number" type="text" name="code" placeholder="请输入产品包装上的编号"/>
-        </form>
-        <div class="index_submit">
-            <button id="submit" type="button" name="submit">查询</button>
+        <div class="search_result">
+            <table>
+                <thead>
+                <tr>
+                    <td colspan="2">鉴定结果</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>编号</td>
+                    <td class="ftl_result">${jade.number}</td>
+                </tr>
+                <tr>
+                    <td>名称</td>
+                    <td class="ftl_result">${jade.name}</td>
+                </tr>
+                <tr>
+                    <td>年代</td>
+                    <td class="ftl_result">${jade.born}</td>
+                </tr>
+                <tr>
+                    <td>尺寸</td>
+                    <td class="ftl_result">${jade.inch}</td>
+                </tr>
+                <tr>
+                    <td>材质</td>
+                    <td class="ftl_result">${jade.material}</td>
+                </tr>
+                <tr>
+                    <td>正面图片</td>
+                    <td class="ftl_result">
+                        <img src="${positive}" content="背面图片"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>反面图片</td>
+                    <td class="ftl_result">
+                        <img src="${negative}" content="背面图片"/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
@@ -114,10 +145,17 @@
 
             var number = $("#number").val();
             if (!isRealNum) {
-                alert("请输入正确的编号，编号不能包含字母");
+                alert(“请输入正确的编号，编号不能包含字母”)
+                ;
                 return;
             } else {
-                window.location.href = "/jade/info/" + number;
+                $.ajax({
+                    url: "/jade/search/" + number,
+                    type: "GET",
+                    success: function (data) {
+                        alert(data);
+                    }
+                })
             }
 
         });
@@ -134,41 +172,13 @@
                 return false;
             }
         }
-        
-/*        $("#submit").click(function () {
+
+        $("#submit").click(function () {
             var number = $("#number").val();
-            $.ajax({
-                url : "/jade/info/" + number,
-                type : "GET",
-                success : function (data) {
-                    $.ajax({
-                        url: "/result.ftl",
-                        type : "GET",
-                        success : function (data) {
-                            $(".index_service").append(data);
-                        },
-                        error: function (data) {
-                            alert("发生未知异常，请重试或联系客服!");
-                        }
-                    });
-                    var path = [];
-                    if (data && data.source) {
-                        path = data.source.split(",");
-                    }
-                    $(".ftl_result").find("td:first").val(data.number);
-                    $(".ftl_result").find("td:second").val(data.name);
-                    $(".ftl_result").find("td:third").val(data.born);
-                    $(".ftl_result").find("td:four").val(data.inch);
-                    $(".ftl_result").find("td:five").val(data.material);
-                    $(".ftl_result").find("td:six").attr("src", path[0]);
-                    $(".ftl_result").find("td:seven").attr("src", path[1]);
-                },
-                error : function (data) {
-                    alert("没有查询到该编号，请重试！");
-                    return;
-                }
-            })
-        })*/
+            window.localtion.href = "/jade/info/" + number;
+        })
+
+
     });
 
 </script>

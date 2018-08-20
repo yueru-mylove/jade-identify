@@ -13,6 +13,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -24,6 +25,8 @@ import java.util.List;
 public class JadeController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JadeController.class);
+
+    private static final String PROTOCOL = "http://";
 
     private static final String FDFS_SERVER = "47.93.219.222";
 
@@ -50,10 +53,23 @@ public class JadeController {
 
     @ResponseBody
     @GetMapping("/info/{number}")
-    public Jade getJadeInfoByID(@PathVariable("number") Integer id) {
+    public ModelAndView getJadeInfoByID(@PathVariable("number") Integer id) {
 
-        Jade jadeInfoByPrimaryKey = jadeService.getJadeInfoByPrimaryKey(id);
-        return jadeInfoByPrimaryKey;
+        Jade jade = jadeService.getJadeInfoByPrimaryKey(id);
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("jade", jade);
+        String[] path = new String[2];
+        if (null != jade && null != jade.getSource()) {
+            String[] strings = jade.getSource().split(",");
+            if (null != strings && strings.length > 1) {
+                path[0] = strings[0];
+                path[1] = strings[1];
+            }
+        }
+        mv.addObject("positive", path[0]);
+        mv.addObject("negative", path[1]);
+        mv.setViewName("result");
+        return mv;
     }
 
     @ResponseBody
@@ -112,7 +128,7 @@ public class JadeController {
 
                 String[] uploadAddress = FastDFSClient.upload(fastDSFile);
                 if (uploadAddress != null && uploadAddress.toString().trim().length() >= 2) {
-                    final String result = FDFS_SERVER + ":" + PORT + "/" + uploadAddress[0] + "/" + uploadAddress[1];
+                    final String result = PROTOCOL + FDFS_SERVER + ":" + PORT + "/" + uploadAddress[0] + "/" + uploadAddress[1];
                     return Result.success(result);
                 }
             }

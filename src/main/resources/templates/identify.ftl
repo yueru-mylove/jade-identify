@@ -38,12 +38,14 @@
         <div class="index_service_t">
             <h2>保利鉴定</h2>
         </div>
-        <form action="#" method="post">
+        <form id="search_form" action="#" method="post">
             <input type="hidden" name="mid" value="1"/>
             <input type="hidden" name="dopost" value="search"/>
-            <input id="number" type="text" name="code" value="number" placeholder="请输入产品包装上的编号"/>
+            <input id="number" type="text" name="code" placeholder="请输入产品包装上的编号"/>
         </form>
-        <button id="submit" type="submit" name="submit" value="查询" />
+        <div class="index_submit">
+            <button id="submit" type="button" name="submit">查询</button>
+        </div>
     </div>
 </div>
 <div class="clear"></div>
@@ -112,32 +114,61 @@
 
             var number = $("#number").val();
             if (!isRealNum) {
-                alert(“请输入正确的编号，编号不能包含字母”);
+                alert("请输入正确的编号，编号不能包含字母");
                 return;
             } else {
-                $.ajax({
-                    url: "/jade/search/" + number,
-                    type : "GET",
-                    success : function (data) {
-                        alert(data);
-                    }
-                })
+                window.location.href = "/jade/info/" + number;
             }
 
         });
 
 
-        function isRealNum(val){
+        function isRealNum(val) {
             // isNaN()函数 把空串 空格 以及NUll 按照0来处理 所以先去除
-            if(val === "" || val ==null){
+            if (val === "" || val == null) {
                 return false;
             }
-            if(!isNaN(val)){
+            if (!isNaN(val)) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
         }
+        
+/*        $("#submit").click(function () {
+            var number = $("#number").val();
+            $.ajax({
+                url : "/jade/info/" + number,
+                type : "GET",
+                success : function (data) {
+                    $.ajax({
+                        url: "/result.ftl",
+                        type : "GET",
+                        success : function (data) {
+                            $(".index_service").append(data);
+                        },
+                        error: function (data) {
+                            alert("发生未知异常，请重试或联系客服!");
+                        }
+                    });
+                    var path = [];
+                    if (data && data.source) {
+                        path = data.source.split(",");
+                    }
+                    $(".ftl_result").find("td:first").val(data.number);
+                    $(".ftl_result").find("td:second").val(data.name);
+                    $(".ftl_result").find("td:third").val(data.born);
+                    $(".ftl_result").find("td:four").val(data.inch);
+                    $(".ftl_result").find("td:five").val(data.material);
+                    $(".ftl_result").find("td:six").attr("src", path[0]);
+                    $(".ftl_result").find("td:seven").attr("src", path[1]);
+                },
+                error : function (data) {
+                    alert("没有查询到该编号，请重试！");
+                    return;
+                }
+            })
+        })*/
     });
 
 </script>

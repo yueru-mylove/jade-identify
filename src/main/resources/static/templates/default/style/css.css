@@ -152,7 +152,7 @@ body {
 }
 
 .mainer {
-    padding-top: 120px;
+    padding-top: 0px;
 }
 
 .banner img {
@@ -350,12 +350,18 @@ div.jogger span.disabled {
     margin-right: 2px;
 }
 
+.iindex_service_h {
+    background-image: url("/static/templates/default/images/search_bg.png");
+    background-size: 100% 100%;
+
+}
+
+
 .index_service {
     height: 360px;
     padding: 40px 0;
     text-align: center;
-    background-color: #e2e6ea;
-    background-color: white;
+    background-image: url("/templates/default/images/search_bg.png");
     min-width: 1200px;
     background-size: 100% 100%;
 }
@@ -395,6 +401,21 @@ div.jogger span.disabled {
     height: 52px;
     color: #fff;
     width: 120px;
+}
+
+.index_submit{
+    margin: 0 auto;
+    width: 150px;
+    padding-top: 40px;
+}
+
+.index_submit button {
+    width: 150px;
+    height: 50px;
+    font-family: "Microsoft YaHei";
+    font-size: 25px;
+    font-style: normal;
+    background-color: #830008;
 }
 
 .page_list {
@@ -1923,4 +1944,87 @@ a:hover, a:active {
 
 .why_web li:nth-of-type(4) span.why_web_icon {
     background-position: -896px 60px;
+}
+
+.media-body p {
+    font-size: 14px;
+}
+
+table {
+    font-size: 14px;
+    color: #000000;
+    width: 894px;
+    border-collapse: collapse;
+    text-align: left;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.search_result table {
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    text-align: start;
+    font-variant: normal;
+}
+
+.search_result table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.search_result tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.search_result table tr {
+    height: 30px;
+    border: 1px solid #B39A4D;
+}
+
+user agent stylesheet tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.search_result table td:first-child {
+    width: 85px;
+    text-align: center;
+}
+.search_result table td {
+    border: 1px solid #B39A4D;
+}
+.search_result body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+.search_result td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.search_result th {
+    font-size: 35px;
+}
+
+.ftl_result img {
+    width: 15%;
+    height: 15%;
+    max-height: 50px;
+    max-width: 150px;
 }
